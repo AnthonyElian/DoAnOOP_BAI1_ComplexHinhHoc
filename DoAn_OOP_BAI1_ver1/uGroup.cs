@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAn_OOP_BAI1_ver1
 {
-    static class uGroup
+    static public class uGroup
     {
         //private ComplexObject Group;
         //private List<Shape> listShape;
@@ -56,7 +56,7 @@ namespace DoAn_OOP_BAI1_ver1
                 A.ListShape.RemoveAt(tmp);
             }
             Console.WriteLine("//////////////////////////////////////////////////////////");
-            //A.Xuat();
+            A.Xuat();
             //ComplexObject Devided = new ComplexObject(A);
             LayDiem(ref A);
             //return Devided;
@@ -92,6 +92,24 @@ namespace DoAn_OOP_BAI1_ver1
             A.P2.y = minY;
         }
 
+        static public double DienTich(ref ComplexObject A)
+        {
+            double DienTich = 0;
+            foreach (Shape item in A.ListShape)
+            {
+                DienTich = DienTich + item.DienTich();
+            }
+            return DienTich;
+        }
 
+        static public double ChuVi(ref ComplexObject A)
+        {
+            double ChuVi = 0;
+            foreach (Shape item in A.ListShape)
+            {
+                ChuVi = ChuVi + item.ChuVi();
+            }
+            return ChuVi;
+        }
     }
 }

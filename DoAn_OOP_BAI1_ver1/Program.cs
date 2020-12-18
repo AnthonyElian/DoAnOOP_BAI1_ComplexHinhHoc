@@ -67,8 +67,9 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 8:
                         {
-                            //ComplexObject A;
-                            //Program.MenuCO(ref A);
+                            ComplexObject A;
+                            A = new ComplexObject();
+                            Program.MenuCO(ref A);
                             break;
                         }
                     case 9:
@@ -128,7 +129,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 5:
                         {
-                            Console.WriteLine("Chu Vi Complex Object la: " + Temp.ChuVi());
+                            Console.WriteLine("Chu Vi Complex Object la: " + uGroup.ChuVi(ref Temp));
                             break;
                         }
                     case 6:

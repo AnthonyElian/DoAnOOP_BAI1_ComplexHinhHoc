@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAn_OOP_BAI1_ver1
 {
-    class ComplexObject : Shape
+    public class ComplexObject : Shape
     {
         private List<Shape> lShape;
 

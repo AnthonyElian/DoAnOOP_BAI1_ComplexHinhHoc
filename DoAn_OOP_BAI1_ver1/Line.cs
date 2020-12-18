@@ -46,12 +46,12 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override double DienTich()
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public override double ChuVi()
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public override void Move()
