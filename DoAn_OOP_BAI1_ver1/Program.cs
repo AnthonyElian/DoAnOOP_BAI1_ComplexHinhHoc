@@ -129,7 +129,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 5:
                         {
-                            Console.WriteLine("Chu Vi Complex Object la: " + uGroup.ChuVi(ref Temp));
+                            Console.WriteLine("Chu Vi Complex Object la: " + Temp.ChuVi());
                             break;
                         }
                     case 6:

@@ -91,25 +91,5 @@ namespace DoAn_OOP_BAI1_ver1
             A.P2.x = maxX;
             A.P2.y = minY;
         }
-
-        static public double DienTich(ref ComplexObject A)
-        {
-            double DienTich = 0;
-            foreach (Shape item in A.ListShape)
-            {
-                DienTich = DienTich + item.DienTich();
-            }
-            return DienTich;
-        }
-
-        static public double ChuVi(ref ComplexObject A)
-        {
-            double ChuVi = 0;
-            foreach (Shape item in A.ListShape)
-            {
-                ChuVi = ChuVi + item.ChuVi();
-            }
-            return ChuVi;
-        }
     }
 }
