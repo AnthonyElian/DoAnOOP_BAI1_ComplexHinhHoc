@@ -1,0 +1,14 @@
+C:\Users\duong\source\repos\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe.config
+C:\Users\duong\source\repos\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe
+C:\Users\duong\source\repos\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.pdb
+C:\Users\duong\source\repos\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csprojAssemblyReference.cache
+C:\Users\duong\source\repos\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csproj.CoreCompileInputs.cache
+C:\Users\duong\source\repos\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.exe
+C:\Users\duong\source\repos\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb
+E:\Microsoft Visual 2019\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe.config
+E:\Microsoft Visual 2019\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe
+E:\Microsoft Visual 2019\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.pdb
+E:\Microsoft Visual 2019\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csprojAssemblyReference.cache
+E:\Microsoft Visual 2019\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csproj.CoreCompileInputs.cache
+E:\Microsoft Visual 2019\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.exe
+E:\Microsoft Visual 2019\DoAn_OOP_BAI1_ver1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb
