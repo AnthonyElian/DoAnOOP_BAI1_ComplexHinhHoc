@@ -27,7 +27,7 @@ namespace DoAn_OOP_BAI1_ver1
         public override void Ve()
         {
             //throw new NotImplementedException();
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.WriteLine("Ve Doan Thang");
             Console.WriteLine("Ve khung Doan Thang");
             
@@ -45,6 +45,11 @@ namespace DoAn_OOP_BAI1_ver1
         }
 
         public override double DienTich()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double ChuVi()
         {
             throw new NotImplementedException();
         }
@@ -70,5 +75,7 @@ namespace DoAn_OOP_BAI1_ver1
 
             Console.WriteLine("Thong tin Mau Sac cua Doan Thang la: " + this.Color);
         }
+
+        
     }
 }

@@ -132,6 +132,8 @@ namespace DoAn_OOP_BAI1_ver1
                     Console.WriteLine(e.Message);
                 }
             }
+            //Console.Write("Moi nhap Mau cua Complex Object: ");
+            //this.Color = int.Parse(Console.ReadLine());
         }
 
         public override void Xuat()
@@ -146,10 +148,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Ve()
         {
-            foreach (Shape item in this.lShape)
-            {
-                item.Ve();
-            }
+            Console.WriteLine("Ve Complex");
+            Console.WriteLine("Ve Khung Lon cua Complex");
         }
 
         public override double DienTich()
@@ -160,6 +160,16 @@ namespace DoAn_OOP_BAI1_ver1
                 DienTich = DienTich + item.DienTich();
             }
             return DienTich;
+        }
+
+        public override double ChuVi()
+        {
+            double ChuVi = 0;
+            foreach (Shape item in this.lShape)
+            {
+                ChuVi = ChuVi + item.ChuVi();
+            }
+            return ChuVi;
         }
     }
 }

@@ -25,7 +25,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Ve()
         {
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.WriteLine("Ve Hinh Vuong");
             Console.WriteLine("Ve Khung Hinh Vuong");
         }
@@ -62,6 +62,11 @@ namespace DoAn_OOP_BAI1_ver1
             return DienTich;
         }
 
+        public override double ChuVi()
+        {
+            return this.Canh() * 4;
+        }
+
         public override void Xuat()
         {
             Console.WriteLine("Thong tin Toa Do thu nhat cua khung Hinh Vuong la: ");
@@ -74,7 +79,7 @@ namespace DoAn_OOP_BAI1_ver1
 
             Console.WriteLine("Canh Hinh Vuong la: " + this.Canh());
 
-            Console.WriteLine("Dien Tich Hinh Vuong la: " + this.DienTich());
+            //Console.WriteLine("Dien Tich Hinh Vuong la: " + this.DienTich());
         }
     }
 }

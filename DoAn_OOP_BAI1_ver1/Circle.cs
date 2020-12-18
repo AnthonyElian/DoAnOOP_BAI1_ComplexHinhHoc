@@ -25,7 +25,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Ve()
         {
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.WriteLine("Ve Hinh Tron");
             Console.WriteLine("Ve khung Hinh Tron");
         }
@@ -49,8 +49,13 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override double DienTich()
         {
-            double DienTich = 3.14 * this.DuongKinh();
+            double DienTich = Math.PI * this.DuongKinh();
             return DienTich;
+        }
+
+        public override double ChuVi()
+        {
+            return Math.PI * this.DuongKinh();
         }
 
         public override void Move()
@@ -76,7 +81,7 @@ namespace DoAn_OOP_BAI1_ver1
 
             Console.WriteLine("Ban Kinh cua Hinh Tron la: " + this.DuongKinh() / 2);
 
-            Console.WriteLine("Dien Tich Hinh Tron la: " + this.DienTich());
+            //Console.WriteLine("Dien Tich Hinh Tron la: " + this.DienTich());
         }
     }
 }

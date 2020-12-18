@@ -26,7 +26,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Ve()
         {
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.WriteLine("Ve Hinh Ngu Giac Deu");
             Console.WriteLine("Ve khung Hinh Ngu Giac Deu");
         }
@@ -71,6 +71,11 @@ namespace DoAn_OOP_BAI1_ver1
             return DienTich;
         }
 
+        public override double ChuVi()
+        {
+            return 5 * this.CanhNguGiacDeu();
+        }
+
         public override void Xuat()
         {
             Console.WriteLine("Thong tin Toa Do thu nhat cua khung Hinh Ngu Giac Deu la: ");
@@ -83,7 +88,7 @@ namespace DoAn_OOP_BAI1_ver1
 
             Console.WriteLine("Canh cua Hinh Ngu Giac Deu la: " + this.CanhNguGiacDeu());
 
-            Console.WriteLine("Dien Tich Hinh Ngu Giac Deu la: " + this.DienTich());
+            //Console.WriteLine("Dien Tich Hinh Ngu Giac Deu la: " + this.DienTich());
         }
     }
 }

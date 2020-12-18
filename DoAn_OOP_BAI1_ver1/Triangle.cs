@@ -26,7 +26,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Ve()
         {
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.WriteLine("Ve Hinh Tam Giac");
             Console.WriteLine("Ve khung Hinh Tam Giac");
         }
@@ -69,14 +69,10 @@ namespace DoAn_OOP_BAI1_ver1
             return DienTich;
         }
 
-        //Kieu ve trong word có 2 loại là tam giác đều và tam giác cân;
-        public void LoaiTamGiac()
+        public override double ChuVi()
         {
-            double temp = (Math.Sqrt(3) / 2) * this.DoDaiDay();
-            if (this.ChieuCao() == temp)
-                Console.WriteLine("Day la Tam Giac Deu ! ");
-            else
-                Console.WriteLine("Day la Tam Giac Can ! ");
+            //throw new NotImplementedException();
+            return 0;
         }
 
         public override void Xuat()
@@ -87,14 +83,14 @@ namespace DoAn_OOP_BAI1_ver1
             Console.WriteLine("Thong tin Toa Do thu hai cua khung Hinh Tam Giac la: ");
             this.P2.Xuat();
 
-            this.LoaiTamGiac();
+            //this.LoaiTamGiac();
 
             Console.WriteLine("Thong tin Mau Sac cua Hinh Tam Giac la: " + this.Color);
 
             Console.WriteLine("Chieu Cao Hinh Tam Giac la: " + this.ChieuCao());
             Console.WriteLine("Do Dai Day Hinh Tam Giac la: " + this.DoDaiDay());
 
-            Console.WriteLine("Dien Tich Hinh Tam Giac la: " + this.DienTich());
+            //Console.WriteLine("Dien Tich Hinh Tam Giac la: " + this.DienTich());
         }
     }
 }

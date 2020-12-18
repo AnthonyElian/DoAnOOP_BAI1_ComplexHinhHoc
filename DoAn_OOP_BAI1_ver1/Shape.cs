@@ -65,6 +65,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public abstract double DienTich();
 
+        public abstract double ChuVi();
+
         public abstract void Xuat();
 
         public abstract void Ve();

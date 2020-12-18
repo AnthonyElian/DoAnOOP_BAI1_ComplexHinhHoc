@@ -91,5 +91,7 @@ namespace DoAn_OOP_BAI1_ver1
             A.P2.x = maxX;
             A.P2.y = minY;
         }
+
+
     }
 }
