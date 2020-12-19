@@ -100,7 +100,9 @@ namespace DoAn_OOP_BAI1_ver1
                 Console.WriteLine("\t\t\t\t***           3. Ve Complex Object                         ***");
                 Console.WriteLine("\t\t\t\t***           4. Dien Tich Complex Object                  ***");
                 Console.WriteLine("\t\t\t\t***           5. Chu Vi Complex Object                     ***");
-                Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                Console.WriteLine("\t\t\t\t***           6. Di Chuyen Complex Object                  ***");
+                Console.WriteLine("\t\t\t\t***           7. Doi mau Complex Object                    ***");
+                Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
                 Console.WriteLine("\t\t\t\t**************************************************************");
                 Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                 int choice = int.Parse(Console.ReadLine());
@@ -134,6 +136,17 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 6:
                         {
+                            Temp.Move();
+                            Temp.Xuat();
+                            break;
+                        }
+                    case 7:
+                        {
+                            Temp.changeColor();
+                            break;
+                        }
+                    case 8:
+                        {
                             flag = 0;
                             break;
                         }
@@ -163,7 +176,9 @@ namespace DoAn_OOP_BAI1_ver1
                         Console.WriteLine("\t\t\t\t***           3. Ve Hinh Ngu Giac                          ***");
                         Console.WriteLine("\t\t\t\t***           4. Dien Tich Hinh Ngu Giac                   ***");
                         Console.WriteLine("\t\t\t\t***           5. Chu Vi Hinh Ngu Giac                      ***");
-                        Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t***           6. Phong To                                  ***");
+                        Console.WriteLine("\t\t\t\t***           7. Thu Nho                                   ***");
+                        Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
                         Console.WriteLine("\t\t\t\t**************************************************************");
                         Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                         int choice = int.Parse(Console.ReadLine());
@@ -201,6 +216,18 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 6:
                                 {
+                                    HNGD.PhongTo();
+                                    HNGD.Xuat();
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    HNGD.ThuNho();
+                                    HNGD.Xuat();
+                                    break;
+                                }
+                            case 8:
+                                {
                                     flag = 0;
                                     break;
                                 }
@@ -234,7 +261,9 @@ namespace DoAn_OOP_BAI1_ver1
                 Console.WriteLine("\t\t\t\t***           3. Ve Hinh Thoi                              ***");
                 Console.WriteLine("\t\t\t\t***           4. Dien Tich Hinh Thoi                       ***");
                 Console.WriteLine("\t\t\t\t***           5. Chu Vi Hinh Thoi                          ***");
-                Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                Console.WriteLine("\t\t\t\t***           6. Phong To                                  ***");
+                Console.WriteLine("\t\t\t\t***           7. Thu Nho                                   ***");
+                Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
                 Console.WriteLine("\t\t\t\t**************************************************************");
                 Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                 int choice = int.Parse(Console.ReadLine());
@@ -269,6 +298,18 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 6:
                         {
+                            HT.PhongTo();
+                            HT.Xuat();
+                            break;
+                        }
+                    case 7:
+                        {
+                            HT.ThuNho();
+                            HT.Xuat();
+                            break;
+                        }
+                    case 8:
+                        {
                             flag = 0;
                             break;
                         }
@@ -288,7 +329,7 @@ namespace DoAn_OOP_BAI1_ver1
             HV.Nhap();
             try
             {
-                if (Math.Abs(HV.P1.x - HV.P2.x) == Math.Abs(HV.P1.y - HV.P2.y))
+                if (Math.Abs(HV.P1.x - HV.P2.x) == Math.Abs(HV.P1.y - HV.P2.y) && ((HV.P1.x != HV.P2.x) && (HV.P1.y != HV.P2.y)))
                 {
                     while (flag == 1)
                     {
@@ -298,7 +339,9 @@ namespace DoAn_OOP_BAI1_ver1
                         Console.WriteLine("\t\t\t\t***           3. Ve Hinh Vuong                             ***");
                         Console.WriteLine("\t\t\t\t***           4. Dien Tich Hinh Vuong                      ***");
                         Console.WriteLine("\t\t\t\t***           5. Chu Vi Hinh Vuong                         ***");
-                        Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t***           7. Phong To                                  ***");
+                        Console.WriteLine("\t\t\t\t***           6. Thu Nho                                   ***");
+                        Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
                         Console.WriteLine("\t\t\t\t**************************************************************");
                         Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                         int choice = int.Parse(Console.ReadLine());
@@ -336,6 +379,18 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 6:
                                 {
+                                    HV.PhongTo();
+                                    HV.Xuat();
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    HV.ThuNho();
+                                    HV.Xuat();
+                                    break;
+                                }
+                            case 8:
+                                {
                                     flag = 0;
                                     break;
                                 }
@@ -348,7 +403,7 @@ namespace DoAn_OOP_BAI1_ver1
                     }
                 }
                 else
-                    throw new Exception("Khong the ve hinh vuong voi khung hinh chu nhat!");
+                    throw new Exception("Khong the ve hinh vuong voi khung hinh chu nhat! | Hoac ban nhap 2 diem trung nhau! ");
             }
             catch (Exception e)
             {
@@ -369,7 +424,9 @@ namespace DoAn_OOP_BAI1_ver1
                 Console.WriteLine("\t\t\t\t***           3. Ve Hinh Tam Giac                          ***");
                 Console.WriteLine("\t\t\t\t***           4. Dien Tich Hinh Tam Giac                   ***");
                 Console.WriteLine("\t\t\t\t***           5. Chu Vi Hinh Tam Giac                      ***");
-                Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                Console.WriteLine("\t\t\t\t***           6. Phong To                                  ***");
+                Console.WriteLine("\t\t\t\t***           7. Thu Nho                                   ***");
+                Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
                 Console.WriteLine("\t\t\t\t**************************************************************");
                 Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                 int choice = int.Parse(Console.ReadLine());
@@ -404,6 +461,18 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 6:
                         {
+                            HTG.PhongTo();
+                            HTG.Xuat();
+                            break;
+                        }
+                    case 7:
+                        {
+                            HTG.ThuNho();
+                            HTG.Xuat();
+                            break;
+                        }
+                    case 8:
+                        {
                             flag = 0;
                             break;
                         }
@@ -423,7 +492,7 @@ namespace DoAn_OOP_BAI1_ver1
             HTron.Nhap();
             try
             {
-                if (Math.Abs(HTron.P1.x - HTron.P2.x) == Math.Abs(HTron.P1.y - HTron.P2.y))
+                if (Math.Abs(HTron.P1.x - HTron.P2.x) == Math.Abs(HTron.P1.y - HTron.P2.y) && ((HTron.P1.x != HTron.P2.x) && (HTron.P1.y != HTron.P2.y)))
                 {
                     while (flag == 1)
                     {
@@ -433,7 +502,9 @@ namespace DoAn_OOP_BAI1_ver1
                         Console.WriteLine("\t\t\t\t***           3. Ve Hinh Tron                              ***");
                         Console.WriteLine("\t\t\t\t***           4. Dien Tich Hinh Tron                       ***");
                         Console.WriteLine("\t\t\t\t***           5. Chu Vi Hinh Tron                          ***");
-                        Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t***           6. Phong To                                  ***");
+                        Console.WriteLine("\t\t\t\t***           7. Thu Nho                                   ***");
+                        Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
                         Console.WriteLine("\t\t\t\t**************************************************************");
                         Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                         int choice = int.Parse(Console.ReadLine());
@@ -471,6 +542,18 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 6:
                                 {
+                                    HTron.PhongTo();
+                                    HTron.Xuat();
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    HTron.ThuNho();
+                                    HTron.Xuat();
+                                    break;
+                                }
+                            case 8:
+                                {
                                     flag = 0;
                                     break;
                                 }
@@ -483,7 +566,7 @@ namespace DoAn_OOP_BAI1_ver1
                     }
                 }
                 else
-                    throw new Exception("Khong the ve hinh tron voi khung hinh chu nhat!");
+                    throw new Exception("Khong the ve hinh tron voi khung hinh chu nhat! Hoac Ban nhap duoc 2 diem trung nhau!");
             }
             catch (Exception e)
             {
@@ -502,7 +585,9 @@ namespace DoAn_OOP_BAI1_ver1
                 Console.WriteLine("\t\t\t\t***           1. Di Chuyen Doan Thang den Vi Tri moi       ***");
                 Console.WriteLine("\t\t\t\t***           2. Doi Mau Doan Thang                        ***");
                 Console.WriteLine("\t\t\t\t***           3. Ve Doan Thang                             ***");
-                Console.WriteLine("\t\t\t\t***           4. Thoat                                     ***");
+                Console.WriteLine("\t\t\t\t***           4. Phong To                                  ***");
+                Console.WriteLine("\t\t\t\t***           5. Thu Nho                                   ***");
+                Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
                 Console.WriteLine("\t\t\t\t**************************************************************");
                 Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                 int choice = int.Parse(Console.ReadLine());
@@ -526,6 +611,18 @@ namespace DoAn_OOP_BAI1_ver1
                             break;
                         }
                     case 4:
+                        {
+                            DT.PhongTo();
+                            DT.Xuat();
+                            break;
+                        }
+                    case 5:
+                        {
+                            DT.ThuNho();
+                            DT.Xuat();
+                            break;
+                        }
+                    case 6:
                         {
                             flag = 0;
                             break;
@@ -552,7 +649,9 @@ namespace DoAn_OOP_BAI1_ver1
                 Console.WriteLine("\t\t\t\t***           3. Ve Hinh Chu Nhat                          ***");
                 Console.WriteLine("\t\t\t\t***           4. Dien Tich Hinh Chu Nhat                   ***");
                 Console.WriteLine("\t\t\t\t***           5. Chu Vi Hinh Chu Nhat                      ***");
-                Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                Console.WriteLine("\t\t\t\t***           6. Phong To Hinh Chu Nhat                    ***");
+                Console.WriteLine("\t\t\t\t***           7. Thu Nho Hinh Chu Nhat                     ***");
+                Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
                 Console.WriteLine("\t\t\t\t**************************************************************");
                 Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                 int choice = int.Parse(Console.ReadLine());
@@ -586,6 +685,18 @@ namespace DoAn_OOP_BAI1_ver1
                             break;
                         }
                     case 6:
+                        {
+                            HCN.PhongTo();
+                            HCN.Xuat();
+                            break;
+                        }
+                    case 7:
+                        {
+                            HCN.ThuNho();
+                            HCN.Xuat();
+                            break;
+                        }
+                    case 8:
                         {
                             flag = 0;
                             break;

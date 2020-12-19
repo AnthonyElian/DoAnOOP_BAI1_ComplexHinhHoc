@@ -132,8 +132,8 @@ namespace DoAn_OOP_BAI1_ver1
                     Console.WriteLine(e.Message);
                 }
             }
-            //Console.Write("Moi nhap Mau cua Complex Object: ");
-            //this.Color = int.Parse(Console.ReadLine());
+            Console.Write("Moi nhap Mau cua Complex Object: ");
+            this.Color = int.Parse(Console.ReadLine());
         }
 
         public override void Xuat()
@@ -150,6 +150,76 @@ namespace DoAn_OOP_BAI1_ver1
         {
             Console.WriteLine("Ve Complex");
             Console.WriteLine("Ve Khung Lon cua Complex");
+            Console.WriteLine("|1_None | 2_Hidden | 3_Dotted | 4_Dashed | 5_Solid | 6_Double | 7_Groove | 8_Ridge | 9_Inset | 10_Outset |");
+            Console.Write("Your choice => ");
+            int choice = int.Parse(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("Khong Ve Khung");
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("Khung An");
+                        this.DKVe();
+                        break;
+                    }
+                case 3:
+                    {
+                        Console.WriteLine("Khung Cham");
+                        this.DKVe();
+                        break;
+                    }
+                case 4:
+                    {
+                        Console.WriteLine("Khung Gach");
+                        this.DKVe();
+                        break;
+                    }
+                case 5:
+                    {
+                        Console.WriteLine("Khung Solid");
+                        this.DKVe();
+                        break;
+                    }
+                case 6:
+                    {
+                        Console.WriteLine("Khung Double");
+                        this.DKVe();
+                        break;
+                    }
+                case 7:
+                    {
+                        Console.WriteLine("Khung Groove");
+                        this.DKVe();
+                        break;
+                    }
+                case 8:
+                    {
+                        Console.WriteLine("Khung Ridge");
+                        this.DKVe();
+                        break;
+                    }
+                case 9:
+                    {
+                        Console.WriteLine("Khung Inset");
+                        this.DKVe();
+                        break;
+                    }
+                case 10:
+                    {
+                        Console.WriteLine("Khung Outset");
+                        this.DKVe();
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
+                        break;
+                    }
+            }
         }
 
         public override double DienTich()
@@ -170,6 +240,26 @@ namespace DoAn_OOP_BAI1_ver1
                 ChuVi = ChuVi + item.ChuVi();
             }
             return ChuVi;
+        }
+
+        public override void Move()
+        {
+            base.Move();
+        }
+
+        public override void changeColor()
+        {
+            base.changeColor();
+        }
+
+        public override void PhongTo()
+        {
+            base.PhongTo();
+        }
+
+        public override void ThuNho()
+        {
+            base.ThuNho();
         }
     }
 }
