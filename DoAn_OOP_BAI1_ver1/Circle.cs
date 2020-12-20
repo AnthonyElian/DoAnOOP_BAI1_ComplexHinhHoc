@@ -163,5 +163,96 @@ namespace DoAn_OOP_BAI1_ver1
 
             //Console.WriteLine("Dien Tich Hinh Tron la: " + this.DienTich());
         }
+
+        public override void Menu()
+        {
+            int flag = 1;
+            //Circle this = new Circle();
+            //this.Nhap();
+            try
+            {
+                if (Math.Abs(this.P1.x - this.P2.x) == Math.Abs(this.P1.y - this.P2.y) && ((this.P1.x != this.P2.x) && (this.P1.y != this.P2.y)))
+                {
+                    while (flag == 1)
+                    {
+                        Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
+                        Console.WriteLine("\t\t\t\t***           1. Di Chuyen Hinh Tron den Vi Tri moi        ***");
+                        Console.WriteLine("\t\t\t\t***           2. Doi Mau Hinh Tron                         ***");
+                        Console.WriteLine("\t\t\t\t***           3. Ve Hinh Tron                              ***");
+                        Console.WriteLine("\t\t\t\t***           4. Dien Tich Hinh Tron                       ***");
+                        Console.WriteLine("\t\t\t\t***           5. Chu Vi Hinh Tron                          ***");
+                        Console.WriteLine("\t\t\t\t***           6. Phong To                                  ***");
+                        Console.WriteLine("\t\t\t\t***           7. Thu Nho                                   ***");
+                        Console.WriteLine("\t\t\t\t***           8. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t**************************************************************");
+                        Console.Write("Moi nhap lua chon cua ban => Your choice: ");
+                        int choice = int.Parse(Console.ReadLine());
+                        switch (choice)
+                        {
+                            case 1:
+                                {
+                                    do
+                                    {
+                                        this.Move();
+                                    }
+                                    while (Math.Abs(this.P1.x - this.P2.x) != Math.Abs(this.P1.y - this.P2.y));
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    this.changeColor();
+                                    this.Xuat();
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    this.Ve();
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    Console.WriteLine("Dien Tich Hinh Tron la: " + this.DienTich());
+                                    break;
+                                }
+                            case 5:
+                                {
+                                    Console.WriteLine("Chu Vi Hinh Tron la: " + this.ChuVi());
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    this.PhongTo();
+                                    this.Xuat();
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    this.ThuNho();
+                                    this.Xuat();
+                                    break;
+                                }
+                            case 8:
+                                {
+                                    flag = 0;
+                                    Console.Clear();
+                                    break;
+                                }
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
+                                    break;
+                                }
+                        }
+                    }
+                }
+                else
+                    throw new Exception("Khong the ve hinh tron voi khung hinh chu nhat! Hoac Ban nhap duoc 2 diem trung nhau!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }

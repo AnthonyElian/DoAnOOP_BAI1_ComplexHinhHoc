@@ -309,5 +309,10 @@ namespace DoAn_OOP_BAI1_ver1
         //{
         //    base.ThuNho();
         //}
+
+        public override void Menu()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

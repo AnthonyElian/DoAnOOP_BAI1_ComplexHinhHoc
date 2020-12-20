@@ -150,18 +150,18 @@ namespace DoAn_OOP_BAI1_ver1
 
         public virtual void PhongTo()
         {
-            Console.Write("Moi nhap n(n nguyen duong): so lan Phong To (Gap n lan): ");
+            Console.Write("Moi nhap n de Hinh To ra (Moi canh tang n/2 don vi!): ");
             int n = int.Parse(Console.ReadLine());
             double temp = n / 2;
             this.p1.y = this.p1.y - temp;
             this.p1.x = this.p1.x - temp;
             this.p2.x = this.p2.x + temp;
-            this.p2.y = this.p2.y + temp;
+            this.p2.y = this.p2.y + temp;       
         }
 
         public virtual void ThuNho()
         {
-            Console.Write("Moi nhap n(n nguyen duong): so lan Thu Nho (Giam n lan): ");
+            Console.Write("Moi nhap n de Hinh be lai (Moi canh giam n/2 don vi!):  ");
             int n = int.Parse(Console.ReadLine());
             double temp = n / 2;
             this.p1.y = this.p1.y + temp;
@@ -188,5 +188,7 @@ namespace DoAn_OOP_BAI1_ver1
         {
             this.iColor = color;
         }
+
+        public abstract void Menu();
     }
 }

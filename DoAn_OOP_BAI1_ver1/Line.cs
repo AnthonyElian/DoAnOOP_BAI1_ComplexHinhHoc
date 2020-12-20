@@ -158,6 +158,80 @@ namespace DoAn_OOP_BAI1_ver1
             Console.WriteLine("Thong tin Mau Sac cua Doan Thang la: " + this.Color);
         }
 
-        
+        public override void Menu()
+        {
+            int flag = 1;
+            try
+            {
+                //Line this = new Line();
+                //this.Nhap();
+                if (this.P1.x != this.P2.x && this.P1.y != this.P2.y)
+                {
+                    while (flag == 1)
+                    {
+                        Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
+                        Console.WriteLine("\t\t\t\t***           1. Di Chuyen Doan Thang den Vi Tri moi       ***");
+                        Console.WriteLine("\t\t\t\t***           2. Doi Mau Doan Thang                        ***");
+                        Console.WriteLine("\t\t\t\t***           3. Ve Doan Thang                             ***");
+                        Console.WriteLine("\t\t\t\t***           4. Phong To                                  ***");
+                        Console.WriteLine("\t\t\t\t***           5. Thu Nho                                   ***");
+                        Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t**************************************************************");
+                        Console.Write("Moi nhap lua chon cua ban => Your choice: ");
+                        int choice = int.Parse(Console.ReadLine());
+                        switch (choice)
+                        {
+                            case 1:
+                                {
+                                    this.Move();
+                                    this.Xuat();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    this.changeColor();
+                                    this.Xuat();
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    this.Ve();
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    this.PhongTo();
+                                    this.Xuat();
+                                    break;
+                                }
+                            case 5:
+                                {
+                                    this.ThuNho();
+                                    this.Xuat();
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    flag = 0;
+                                    Console.Clear();
+                                    break;
+                                }
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
+                                    break;
+                                }
+                        }
+                    }
+                }
+                else
+                    throw new Exception("Khong the nhap 2 diem trung nhau!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
