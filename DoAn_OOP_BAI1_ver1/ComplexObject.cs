@@ -38,9 +38,21 @@ namespace DoAn_OOP_BAI1_ver1
             int DT = int.Parse(Console.ReadLine());
             for (int i = 0; i < DT; i++)
             {
-                Line a = new Line();
-                a.Nhap();
-                this.lShape.Add(a);
+                try
+                {
+                    Line a = new Line();
+                    a.Nhap();
+                    if (a.P1.x != a.P2.x && a.P2.y != a.P1.y)
+                    {
+                        this.lShape.Add(a);
+                    }
+                    else
+                        throw new Exception("Khong the nhap 2 diem trung nhau!");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
 
             Console.Write("Vui long nhap so luong Hinh Tron: ");
@@ -51,7 +63,7 @@ namespace DoAn_OOP_BAI1_ver1
                 a.Nhap();
                 try
                 {
-                    if (Math.Abs(a.P1.x - a.P2.x) == Math.Abs(a.P1.y - a.P2.y))
+                    if (Math.Abs(a.P1.x - a.P2.x) == Math.Abs(a.P1.y - a.P2.y) && (a.P1.x != a.P2.x && a.P2.y != a.P1.y))
                     {
                         this.lShape.Add(a);
                     }
@@ -68,18 +80,42 @@ namespace DoAn_OOP_BAI1_ver1
             int HCN = int.Parse(Console.ReadLine());
             for (int i = 0; i < HCN; i++)
             {
-                Rectangle a = new Rectangle();
-                a.Nhap();
-                this.lShape.Add(a);
+                try
+                {
+                    Rectangle a = new Rectangle();
+                    a.Nhap();
+                    if (a.P1.x != a.P2.x && a.P2.y != a.P1.y)
+                    {
+                        this.lShape.Add(a);
+                    }
+                    else
+                        throw new Exception("Khong the nhap 2 diem trung nhau!");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
 
             Console.Write("Vui long nhap so luong Hinh Tam Giac: ");
             int TG = int.Parse(Console.ReadLine());
             for (int i = 0; i < TG; i++)
             {
-                Triangle a = new Triangle();
-                a.Nhap();
-                this.lShape.Add(a);
+                try
+                {
+                    Triangle a = new Triangle();
+                    a.Nhap();
+                    if (a.P1.x != a.P2.x && a.P2.y != a.P1.y)
+                    {
+                        this.lShape.Add(a);
+                    }
+                    else
+                        throw new Exception("Khong the nhap 2 diem trung nhau!");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
 
             Console.Write("Vui long nhap so luong Hinh Vuong: ");
@@ -90,12 +126,12 @@ namespace DoAn_OOP_BAI1_ver1
                 a.Nhap();
                 try
                 {
-                    if (Math.Abs(a.P1.x - a.P2.x) == Math.Abs(a.P1.y - a.P2.y))
+                    if (Math.Abs(a.P1.x - a.P2.x) == Math.Abs(a.P1.y - a.P2.y) && (a.P1.x != a.P2.x && a.P2.y != a.P1.y))
                     {
                         this.lShape.Add(a);
                     }
                     else
-                        throw new Exception("Khong the ve hinh vuong voi khung hinh chu nhat!");
+                        throw new Exception("Khong the ve hinh vuong voi khung hinh chu nhat! Hoac ban nhap 2 diem trung nhau!");
                 }
                 catch (Exception e)
                 {
@@ -107,9 +143,21 @@ namespace DoAn_OOP_BAI1_ver1
             int HTh = int.Parse(Console.ReadLine());
             for (int i = 0; i < HTh; i++)
             {
-                Rhombus a = new Rhombus();
-                a.Nhap();
-                this.lShape.Add(a);
+                try
+                {
+                    Rhombus a = new Rhombus();
+                    a.Nhap();
+                    if (a.P1.x != a.P2.x && a.P2.y != a.P1.y)
+                    {
+                        this.lShape.Add(a);
+                    }
+                    else
+                        throw new Exception("Khong the nhap 2 diem trung nhau!");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
 
             Console.Write("Vui long nhap so luong Hinh Ngu Giac Deu: ");
@@ -120,12 +168,12 @@ namespace DoAn_OOP_BAI1_ver1
                 a.Nhap();
                 try
                 {
-                    if (Math.Abs(a.P1.x - a.P2.x) == Math.Abs(a.P1.y - a.P2.y))
+                    if (Math.Abs(a.P1.x - a.P2.x) == Math.Abs(a.P1.y - a.P2.y) && (a.P1.x != a.P2.x && a.P2.y != a.P1.y))
                     {
                         this.lShape.Add(a);
                     }
                     else
-                        throw new Exception("Khong the ve hinh Ngu Giac Deu voi khung hinh chu nhat!");
+                        throw new Exception("Khong the ve hinh Ngu Giac Deu voi khung hinh chu nhat! Hoac ban dang nhap 2 diem trung nhau");
                 }
                 catch (Exception e)
                 {
@@ -143,7 +191,7 @@ namespace DoAn_OOP_BAI1_ver1
                 item.Xuat();
                 //item.Ve();
             }
-            //Console.WriteLine("Dien tich complex object la: " + this.DienTich());
+            //Console.WriteLine("Mau cua complexobject la: ");this.changeColor(
         }
 
         public override void Ve()
@@ -242,24 +290,24 @@ namespace DoAn_OOP_BAI1_ver1
             return ChuVi;
         }
 
-        public override void Move()
-        {
-            base.Move();
-        }
+        //public override void Move()
+        //{
+        //    base.Move();
+        //}
 
-        public override void changeColor()
-        {
-            base.changeColor();
-        }
+        //public override void changeColor()
+        //{
+        //    base.changeColor();
+        //}
 
-        public override void PhongTo()
-        {
-            base.PhongTo();
-        }
+        //public override void PhongTo()
+        //{
+        //    base.PhongTo();
+        //}
 
-        public override void ThuNho()
-        {
-            base.ThuNho();
-        }
+        //public override void ThuNho()
+        //{
+        //    base.ThuNho();
+        //}
     }
 }

@@ -71,7 +71,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public void DKVe()
         {           
-            int flag = 1;      
+            int flag = 1;
+            int dem = 0;
             while (flag == 1)
             {
                 Console.WriteLine("|1_Tat ca | 2_Canh Tren | 3_Canh Duoi | 4_Canh Trai | 5_Canh Phai | 6_Thoat |");
@@ -87,22 +88,34 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 2:
                         {
+                            dem = dem + 1;
                             Console.WriteLine("Dong Khung Canh Tren");
+                            if (dem == 4)
+                                flag = 0;
                             break;
                         }
                     case 3:
                         {
+                            dem = dem + 1;
                             Console.WriteLine("Dong Khung Canh Duoi");
+                            if (dem == 4)
+                                flag = 0;
                             break;
                         }
                     case 4:
                         {
+                            dem = dem + 1;
                             Console.WriteLine("Dong Khung Canh Trai");
+                            if (dem == 4)
+                                flag = 0;
                             break;
                         }
                     case 5:
                         {
+                            dem = dem + 1;
                             Console.WriteLine("Dong Khung Canh Phai");
+                            if (dem == 4)
+                                flag = 0;
                             break;
                         }
                     case 6:
