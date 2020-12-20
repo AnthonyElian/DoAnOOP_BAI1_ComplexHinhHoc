@@ -150,8 +150,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public virtual void PhongTo()
         {
-            Console.Write("Moi nhap n de Hinh To ra (Moi canh tang n/2 don vi!): ");
-            int n = int.Parse(Console.ReadLine());
+            Console.Write("Moi nhap n (n nguyen) de Hinh To ra (Moi canh tang n/2 don vi!): ");
+            double n = double.Parse(Console.ReadLine());
             double temp = n / 2;
             this.p1.y = this.p1.y - temp;
             this.p1.x = this.p1.x - temp;
@@ -161,8 +161,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public virtual void ThuNho()
         {
-            Console.Write("Moi nhap n de Hinh be lai (Moi canh giam n/2 don vi!):  ");
-            int n = int.Parse(Console.ReadLine());
+            Console.Write("Moi nhap n (n nguyen) de Hinh be lai (Moi canh giam n/2 don vi!):  ");
+            double n = double.Parse(Console.ReadLine());
             double temp = n / 2;
             this.p1.y = this.p1.y + temp;
             this.p1.x = this.p1.x + temp;

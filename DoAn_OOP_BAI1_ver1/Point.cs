@@ -49,8 +49,8 @@ namespace DoAn_OOP_BAI1_ver1
         
         public void Xuat()
         {
-            Console.WriteLine("Hoanh Do x la: " + this.dx);
-            Console.WriteLine("Tung Do y la: " + this.dy);
+            Console.WriteLine("Hoanh Do x la: " + Math.Round(this.dx,3));
+            Console.WriteLine("Tung Do y la: " + Math.Round(this.dy,3));
         }
     }
 }
