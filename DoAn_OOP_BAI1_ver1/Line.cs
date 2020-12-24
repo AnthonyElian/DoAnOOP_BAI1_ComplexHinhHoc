@@ -165,7 +165,7 @@ namespace DoAn_OOP_BAI1_ver1
             {
                 //Line this = new Line();
                 //this.Nhap();
-                if (this.P1.x != this.P2.x && this.P1.y != this.P2.y)
+                if (this.P1.x != this.P2.x || this.P1.y != this.P2.y)
                 {
                     while (flag == 1)
                     {

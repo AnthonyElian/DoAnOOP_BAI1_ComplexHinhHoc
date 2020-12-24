@@ -196,6 +196,7 @@ namespace DoAn_OOP_BAI1_ver1
                                         this.Move();
                                     }
                                     while (Math.Abs(this.P1.x - this.P2.x) != Math.Abs(this.P1.y - this.P2.y));
+                                    this.Xuat();
                                     break;
                                 }
                             case 2:

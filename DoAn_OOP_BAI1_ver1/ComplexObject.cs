@@ -18,20 +18,59 @@ namespace DoAn_OOP_BAI1_ver1
         public ComplexObject() : base() 
         {
             this.lShape = new List<Shape>();
+            this.P1 = new Point(0, 0);
+            this.P2 = new Point(0, 0);
         }
 
         public ComplexObject(Point p1, Point p2, int color, List<Shape> listshape) : base(p1, p2, color) 
         {
             this.lShape = listshape;
+            this.SetDiem(); ;
         }
 
         public ComplexObject(List<Shape> lshape)
         {
             this.lShape = lshape;
+            this.SetDiem();
         }
 
         ~ComplexObject() { }
+        public void add(Shape X)
+        {
+            this.lShape.Add(X);
+        }
+        public void SetDiem()
+        {
+            double xmax = double.MinValue, ymax = double.MinValue, xmin = double.MaxValue, ymin = double.MaxValue;
+            foreach (var item in this.lShape)
+            {
+                if (item.P1.x > xmax)
+                    xmax = item.P1.x;
+                if (item.P1.y > ymax)
+                    ymax = item.P1.y;
+                if (item.P2.x > xmax)
+                    xmax = item.P2.x;
+                if (item.P2.y > ymax)
+                    ymax = item.P2.y;
 
+                if (item.P1.x < xmin)
+                    xmin = item.P1.x;
+                if (item.P1.y < ymin)
+                    ymin = item.P1.y;
+                if (item.P2.x < xmin)
+                    xmin = item.P2.x;
+                if (item.P2.y < ymin)
+                    ymin = item.P2.y;
+            }
+            this.P1.x = xmin;
+            this.P1.y = ymin;
+            this.P2.x = xmax;
+            this.P2.y = ymax;
+        }
+        public override void changeColor()
+        {
+            base.changeColor();
+        }
         public override void Nhap()
         {
             Console.Write("Vui long nhap so luong Doan Thang: ");
@@ -42,7 +81,7 @@ namespace DoAn_OOP_BAI1_ver1
                 {
                     Line a = new Line();
                     a.Nhap();
-                    if (a.P1.x != a.P2.x && a.P2.y != a.P1.y)
+                    if (a.P1.x != a.P2.x || a.P2.y != a.P1.y)
                     {
                         this.lShape.Add(a);
                     }
@@ -182,16 +221,25 @@ namespace DoAn_OOP_BAI1_ver1
             }
             Console.Write("Moi nhap Mau cua Complex Object: ");
             this.Color = int.Parse(Console.ReadLine());
+            this.SetDiem();
         }
 
         public override void Xuat()
         {
+            Console.WriteLine("Thong tin Toa Do thu nhat cua khung Complex la: ");
+            this.P1.Xuat();
+
+            Console.WriteLine("Thong tin Toa Do thu hai cua khung Complex la: ");
+            this.P2.Xuat();
+
+            Console.WriteLine("Thong tin Mau Sac cua Complex la: " + this.Color);
             foreach (Shape item in this.lShape)
             {
                 item.Xuat();
                 //item.Ve();
             }
-            //Console.WriteLine("Mau cua complexobject la: ");this.changeColor(
+            Console.WriteLine("Mau cua complexobject la: ");
+            this.changeColor();
         }
 
         public override void Ve()
@@ -290,10 +338,10 @@ namespace DoAn_OOP_BAI1_ver1
             return ChuVi;
         }
 
-        //public override void Move()
-        //{
-        //    base.Move();
-        //}
+        public override void Move()
+        {
+            base.Move();
+        }
 
         //public override void changeColor()
         //{
@@ -313,6 +361,153 @@ namespace DoAn_OOP_BAI1_ver1
         public override void Menu()
         {
             throw new NotImplementedException();
+        }
+        public void MenuTemp()
+        {
+            int flag = 1;
+            ComplexObject Temp = new ComplexObject();
+            this.Xuat();
+            Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
+            Temp = uGroup.Merge(this.ListShape);
+            Temp.SetDiem();
+            Console.WriteLine("Da merge: " + Temp.lShape.Count);
+            while (flag == 1)
+            {
+                
+                Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
+                Console.WriteLine("\t\t\t\t***           1. Add                                       ***");
+                Console.WriteLine("\t\t\t\t***           2. Devided                                   ***");
+                Console.WriteLine("\t\t\t\t***           3. Dien Tich                                 ***");
+                Console.WriteLine("\t\t\t\t***           4. Chu Vi                                    ***");
+                Console.WriteLine("\t\t\t\t***           5. Ve                                        ***");
+                Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                Console.WriteLine("\t\t\t\t**************************************************************");
+                Console.Write("Moi nhap lua chon cua ban => Your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        {
+                            //this.Xuat();
+                            Console.WriteLine("Ban muon them hinh thu may");
+                            int key = int.Parse(Console.ReadLine());
+                            Temp.add(this.lShape[key]);
+                            Console.WriteLine("Tong so Hinh o tren la: " + Temp.ListShape.Count);
+                            Temp.SetDiem();
+                            break;
+                        }
+                    case 2:
+                        {
+                            uGroup.Devided(ref Temp);
+                            Temp.SetDiem(); 
+                            Temp.Xuat();
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine("Dien Tich la: " + Temp.DienTich());
+                            break;
+                        }
+                    case 4:
+                        {
+                            Console.WriteLine("Chu Vi la: " + Temp.ChuVi());
+                            break;
+                        }
+                    case 5:
+                        {
+                            Temp.Ve();
+                            break;
+                        }
+                    case 6:
+                        {
+                            flag = 0;
+                            Console.Clear();
+                            break;
+                        }
+                    default:
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
+                            break;
+                            // Console.Clear();
+                        }
+                }
+            }
+        }
+
+        public void MenuCO()
+        {
+            int flag = 1;
+            ComplexObject CO = new ComplexObject();
+            //ComplexObject Temp;
+            CO.Nhap();
+            try
+            {
+                if (CO.ListShape.Count != 0)
+                {
+                    while (flag == 1)
+                    {
+                        Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
+                        Console.WriteLine("\t\t\t\t***           1. Thao tac tren hinh da merge hoac devide   ***");
+                        Console.WriteLine("\t\t\t\t***           2. Ve Complex Object                         ***");
+                        Console.WriteLine("\t\t\t\t***           3. Dien Tich Complex Object                  ***");
+                        Console.WriteLine("\t\t\t\t***           4. Chu Vi Complex Object                     ***");
+                        Console.WriteLine("\t\t\t\t***           5. Move                                     ***");
+                        Console.WriteLine("\t\t\t\t***           6. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t**************************************************************");
+                        Console.Write("Moi nhap lua chon cua ban => Your choice: ");
+                        int choice = int.Parse(Console.ReadLine());
+                        switch (choice)
+                        {
+                            case 1:
+                                {
+                                    CO.MenuTemp();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    CO.Ve();
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    Console.WriteLine("Dien Tich Complex Object la: " + CO.DienTich());
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    Console.WriteLine("Chu Vi Complex Object la: " + CO.ChuVi());
+                                    break;
+                                }
+                            case 5:
+                                {
+
+                                    CO.Move();
+                                    CO.Xuat();
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    flag = 0;
+                                    Console.Clear();
+                                    break;
+                                }
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
+                                    break;
+                                }
+                        }
+                    }
+                }
+                else
+                    throw new Exception("Khong Toan Tai Danh Sach Hinh!!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
