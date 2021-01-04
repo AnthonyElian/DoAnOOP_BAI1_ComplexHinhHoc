@@ -1,0 +1,57 @@
+﻿  doan_bai2_c++.cpp
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(8,1): error C2011: 'CaNhan': 'class' type redefinition
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(7): message : see declaration of 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\BacSi.h(9,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVChienThuat.h(7,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVTheLuc.h(8,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVBaoVe.h(8,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVVeSinh.h(8,1): error C2504: 'CaNhan': base class undefined
+  QuanLyNhanVien.cpp
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(8,1): error C2011: 'CaNhan': 'class' type redefinition
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(7): message : see declaration of 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\BacSi.h(9,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVChienThuat.h(7,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVTheLuc.h(8,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVBaoVe.h(8,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVVeSinh.h(8,1): error C2504: 'CaNhan': base class undefined
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(101,26): error C2440: 'initializing': cannot convert from 'BacSi *' to 'CaNhan *'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(101,22): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(112,25): error C2440: 'initializing': cannot convert from 'HLVChienThuat *' to 'CaNhan *'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(112,22): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(123,25): error C2440: 'initializing': cannot convert from 'HLVTheLuc *' to 'CaNhan *'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(123,22): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(134,25): error C2440: 'initializing': cannot convert from 'NVBaoVe *' to 'CaNhan *'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(134,22): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(145,25): error C2440: 'initializing': cannot convert from 'NVVeSinh *' to 'CaNhan *'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(145,22): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(183,13): error C2027: use of undefined type 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(7): message : see declaration of 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(183,30): error C2027: use of undefined type 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(7): message : see declaration of 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(199,37): error C2039: 'sHoTen': is not a member of 'BacSi'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\BacSi.h(7): message : see declaration of 'BacSi'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(199,72): error C2039: 'sNghe': is not a member of 'BacSi'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\BacSi.h(7): message : see declaration of 'BacSi'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(232,37): error C2039: 'sHoTen': is not a member of 'HLVChienThuat'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVChienThuat.h(6): message : see declaration of 'HLVChienThuat'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(232,72): error C2039: 'sNghe': is not a member of 'HLVChienThuat'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVChienThuat.h(6): message : see declaration of 'HLVChienThuat'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(265,37): error C2039: 'sHoTen': is not a member of 'HLVTheLuc'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVTheLuc.h(6): message : see declaration of 'HLVTheLuc'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(265,72): error C2039: 'sNghe': is not a member of 'HLVTheLuc'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\HLVTheLuc.h(6): message : see declaration of 'HLVTheLuc'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(300,37): error C2039: 'sHoTen': is not a member of 'NVBaoVe'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVBaoVe.h(6): message : see declaration of 'NVBaoVe'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(300,72): error C2039: 'sNghe': is not a member of 'NVBaoVe'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVBaoVe.h(6): message : see declaration of 'NVBaoVe'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(313,37): error C2039: 'sHoTen': is not a member of 'NVVeSinh'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVVeSinh.h(7): message : see declaration of 'NVVeSinh'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(313,72): error C2039: 'sNghe': is not a member of 'NVVeSinh'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\NVVeSinh.h(7): message : see declaration of 'NVVeSinh'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(324,40): error C2027: use of undefined type 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(7): message : see declaration of 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(326,36): error C2027: use of undefined type 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(7): message : see declaration of 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\QuanLyNhanVien.cpp(326,71): error C2027: use of undefined type 'CaNhan'
+E:\Microsoft Visual 2019\doan_bai2_c++\doan_bai2_c++\CaNhan.h(7): message : see declaration of 'CaNhan'
+  Generating Code...
