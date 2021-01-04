@@ -19,10 +19,3 @@ E:\Bai1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb
 E:\Bai1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe.config
 E:\Bai1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe
 E:\Bai1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.pdb
-D:\School\OOP\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe.config
-D:\School\OOP\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe
-D:\School\OOP\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.pdb
-D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csprojAssemblyReference.cache
-D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csproj.CoreCompileInputs.cache
-D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.exe
-D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb

@@ -82,7 +82,7 @@ namespace DoAn_OOP_BAI1_ver1
                     case 8:
                         {
                             ComplexObject cpO = new ComplexObject();
-                            cpO.Menu();
+                            cpO.MenuCO();
                             break;
                         }
                     case 9:

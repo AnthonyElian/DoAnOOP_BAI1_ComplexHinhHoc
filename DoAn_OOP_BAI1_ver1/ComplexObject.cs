@@ -67,6 +67,10 @@ namespace DoAn_OOP_BAI1_ver1
             this.P2.x = xmax;
             this.P2.y = ymax;
         }
+        public override void changeColor()
+        {
+            base.changeColor();
+        }
         public override void Nhap()
         {
             Console.Write("Vui long nhap so luong Doan Thang: ");
@@ -234,6 +238,8 @@ namespace DoAn_OOP_BAI1_ver1
                 item.Xuat();
                 //item.Ve();
             }
+            Console.WriteLine("Mau cua complexobject la: ");
+            this.changeColor();
         }
 
         public override void Ve()
@@ -334,38 +340,27 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Move()
         {
-            Console.WriteLine("Vecto Tinh Tien V(a, b)");
-            Console.Write("Hoanh Do vecto V: ");
-            int a = int.Parse(Console.ReadLine());
-            Console.Write("Tung Do vecto V: ");
-            int b = int.Parse(Console.ReadLine());
-            base.Move(a,b);
-            foreach (var item in this.ListShape)
-                item.Move(a, b);
+            base.Move();
         }
 
-        public override void changeColor()
-        {
-            base.changeColor();
-        }
+        //public override void changeColor()
+        //{
+        //    base.changeColor();
+        //}
 
-        public override void PhongTo()
-        {
-            Console.Write("Moi nhap n (n nguyen) de Hinh To ra (Moi canh tang n/2 don vi!): ");
-            double n = double.Parse(Console.ReadLine());
-            base.PhongTo(n);
-            foreach (var item in this.ListShape)
-                item.PhongTo(n);
+        //public override void PhongTo()
+        //{
+        //    base.PhongTo();
+        //}
 
-        }
+        //public override void ThuNho()
+        //{
+        //    base.ThuNho();
+        //}
 
-        public override void ThuNho()
+        public override void Menu()
         {
-            Console.Write("Moi nhap n (n nguyen) de Hinh be lai (Moi canh giam n/2 don vi!):  ");
-            double n = double.Parse(Console.ReadLine());
-            base.ThuNho(n);
-            foreach (var item in this.ListShape)
-                item.ThuNho(n);
+            throw new NotImplementedException();
         }
         public void MenuTemp()
         {
@@ -393,7 +388,7 @@ namespace DoAn_OOP_BAI1_ver1
                 {
                     case 1:
                         {
-                            this.Xuat();
+                            //this.Xuat();
                             Console.WriteLine("Ban muon them hinh thu may");
                             int key = int.Parse(Console.ReadLine());
                             Temp.add(this.lShape[key]);
@@ -440,18 +435,20 @@ namespace DoAn_OOP_BAI1_ver1
             }
         }
 
-        public override void Menu()
+        public void MenuCO()
         {
             int flag = 1;
-            this.Nhap();
+            ComplexObject CO = new ComplexObject();
+            //ComplexObject Temp;
+            CO.Nhap();
             try
             {
-                if (this.ListShape.Count != 0)
+                if (CO.ListShape.Count != 0)
                 {
                     while (flag == 1)
                     {
                         Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
-                        Console.WriteLine("\t\t\t\t***           1. Merger                                    ***");
+                        Console.WriteLine("\t\t\t\t***           1. Thao tac tren hinh da merge hoac devide   ***");
                         Console.WriteLine("\t\t\t\t***           2. Ve Complex Object                         ***");
                         Console.WriteLine("\t\t\t\t***           3. Dien Tich Complex Object                  ***");
                         Console.WriteLine("\t\t\t\t***           4. Chu Vi Complex Object                     ***");
@@ -464,29 +461,29 @@ namespace DoAn_OOP_BAI1_ver1
                         {
                             case 1:
                                 {
-                                    this.MenuTemp();
+                                    CO.MenuTemp();
                                     break;
                                 }
                             case 2:
                                 {
-                                    this.Ve();
+                                    CO.Ve();
                                     break;
                                 }
                             case 3:
                                 {
-                                    Console.WriteLine("Dien Tich Complex Object la: " + this.DienTich());
+                                    Console.WriteLine("Dien Tich Complex Object la: " + CO.DienTich());
                                     break;
                                 }
                             case 4:
                                 {
-                                    Console.WriteLine("Chu Vi Complex Object la: " + this.ChuVi());
+                                    Console.WriteLine("Chu Vi Complex Object la: " + CO.ChuVi());
                                     break;
                                 }
                             case 5:
                                 {
 
-                                    this.Move();
-                                    this.Xuat();
+                                    CO.Move();
+                                    CO.Xuat();
                                     break;
                                 }
                             case 6:
