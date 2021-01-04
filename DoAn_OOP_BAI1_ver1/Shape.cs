@@ -147,7 +147,13 @@ namespace DoAn_OOP_BAI1_ver1
             this.p1.y = this.p1.y + b;
             this.p2.y = this.p2.y + b;
         }
-
+        public virtual void Move(int a,int b)
+        {
+            this.p1.x = this.p1.x + a;
+            this.p2.x = this.p2.x + a;
+            this.p1.y = this.p1.y + b;
+            this.p2.y = this.p2.y + b;
+        }
         public virtual void PhongTo()
         {
             Console.Write("Moi nhap n (n nguyen) de Hinh To ra (Moi canh tang n/2 don vi!): ");
@@ -157,6 +163,14 @@ namespace DoAn_OOP_BAI1_ver1
             this.p1.x = this.p1.x - temp;
             this.p2.x = this.p2.x + temp;
             this.p2.y = this.p2.y + temp;       
+        }
+        public virtual void PhongTo(double n)
+        {
+            double temp = n / 2;
+            this.p1.y = this.p1.y - temp;
+            this.p1.x = this.p1.x - temp;
+            this.p2.x = this.p2.x + temp;
+            this.p2.y = this.p2.y + temp;
         }
 
         public virtual void ThuNho()
@@ -169,7 +183,14 @@ namespace DoAn_OOP_BAI1_ver1
             this.p2.x = this.p2.x - temp;
             this.p2.y = this.p2.y - temp;
         }
-
+        public virtual void ThuNho(double n)
+        {
+            double temp = n / 2;
+            this.p1.y = this.p1.y + temp;
+            this.p1.x = this.p1.x + temp;
+            this.p2.x = this.p2.x - temp;
+            this.p2.y = this.p2.y - temp;
+        }
         public void Move(Point P1)
         {
             this.p1.x = this.p1.x + P1.x;
