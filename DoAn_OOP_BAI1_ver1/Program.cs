@@ -8,7 +8,7 @@ namespace DoAn_OOP_BAI1_ver1
 {
     class Program
     {
-       
+       //sua ngu
         static void Main(string[] args)
         {
             int flag = 1;
