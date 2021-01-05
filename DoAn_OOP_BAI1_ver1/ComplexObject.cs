@@ -373,72 +373,85 @@ namespace DoAn_OOP_BAI1_ver1
             ComplexObject Temp = new ComplexObject();
             this.Xuat();
             Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
-            Temp = uGroup.Merge(this.ListShape);
-            Temp.SetDiem();
-            Console.WriteLine("Da merge: " + Temp.lShape.Count);
-            Temp.changeColor();
-            while (flag == 1)
+            Temp = uGroup.Merge(this.ListShape);          
+            try
             {
-                
-                Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
-                Console.WriteLine("\t\t\t\t***           1. Add                                       ***");
-                Console.WriteLine("\t\t\t\t***           2. Devided                                   ***");
-                Console.WriteLine("\t\t\t\t***           3. Xuat thong tin                            ***");
-                Console.WriteLine("\t\t\t\t***           4. Thao tac khac                             ***");
-                Console.WriteLine("\t\t\t\t***           5. Ve                                        ***");
-                Console.WriteLine("\t\t\t\t***           6. Thoat ra                                     ***");
-                Console.WriteLine("\t\t\t\t**************************************************************");
-                Console.Write("Moi nhap lua chon cua ban => Your choice: ");
-                int choice = int.Parse(Console.ReadLine());
-                switch (choice)
+                if (Temp.lShape.Count != 0)
                 {
-                    case 1:
+                    Temp.SetDiem();
+                    Console.WriteLine("Da merge: " + Temp.lShape.Count);
+                    Console.Write("Nhap mau cua complex da merge: ");
+                    Temp.Color = int.Parse(Console.ReadLine());
+                    while (flag == 1)
+                    {
+
+                        Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
+                        Console.WriteLine("\t\t\t\t***           1. Add                                       ***");
+                        Console.WriteLine("\t\t\t\t***           2. Divide                                    ***");
+                        Console.WriteLine("\t\t\t\t***           3. Xuat thong tin                            ***");
+                        Console.WriteLine("\t\t\t\t***           4. Thao tac khac                             ***");
+                        Console.WriteLine("\t\t\t\t***           5. Ve                                        ***");
+                        Console.WriteLine("\t\t\t\t***           6. Thoat ra                                  ***");
+                        Console.WriteLine("\t\t\t\t**************************************************************");
+                        Console.Write("Moi nhap lua chon cua ban => Your choice: ");
+                        int choice = int.Parse(Console.ReadLine());
+                        switch (choice)
                         {
-                            this.Xuat();
-                            Console.WriteLine("Ban muon them hinh thu may");
-                            int key = int.Parse(Console.ReadLine());
-                            Temp.add(this.lShape[key]);
-                            Console.WriteLine("Tong so Hinh o tren la: " + Temp.ListShape.Count);
-                            Temp.SetDiem();
-                            break;
+                            case 1:
+                                {
+                                    this.Xuat();
+                                    Console.WriteLine("Ban muon them hinh thu may");
+                                    int key = int.Parse(Console.ReadLine());
+                                    Temp.add(this.lShape[key]);
+                                    Console.WriteLine("Tong so Hinh o tren la: " + Temp.ListShape.Count);
+                                    Temp.SetDiem();
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    uGroup.Devided(ref Temp);
+                                    Temp.SetDiem();
+                                    Console.WriteLine("Da unGroup");
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    Temp.Xuat();
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    Temp.Menu();
+                                    break;
+                                }
+                            case 5:
+                                {
+                                    Temp.Ve();
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    flag = 0;
+                                    Console.Clear();
+                                    break;
+                                }
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
+                                    break;
+                                    // Console.Clear();
+                                }
                         }
-                    case 2:
-                        {
-                            uGroup.Devided(ref Temp);
-                            Temp.SetDiem();
-                            Console.WriteLine("Da unGroup");
-                            break;
-                        }
-                    case 3:
-                        {
-                            Temp.Xuat();
-                            break;
-                        }
-                    case 4:
-                        {
-                            Temp.Menu();
-                            break;
-                        }
-                    case 5:
-                        {
-                            Temp.Ve();
-                            break;
-                        }
-                    case 6:
-                        {
-                            flag = 0;
-                            Console.Clear();
-                            break;
-                        }
-                    default:
-                        {
-                            Console.Clear();
-                            Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
-                            break;
-                            // Console.Clear();
-                        }
+                    }
                 }
+                else
+                    throw new Exception("Khong Ton Tai Danh Sach Hinh!!");
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }           
         }
 
         public override void Menu()
@@ -453,7 +466,7 @@ namespace DoAn_OOP_BAI1_ver1
                     while (flag == 1)
                     {
                         Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
-                        Console.WriteLine("\t\t\t\t***           1. Merger                                    ***");
+                        Console.WriteLine("\t\t\t\t***           1. Thao tac tren hinh Group/UnGroup          ***");
                         Console.WriteLine("\t\t\t\t***           2. Ve Complex Object                         ***");
                         Console.WriteLine("\t\t\t\t***           3. Dien Tich Complex Object                  ***");
                         Console.WriteLine("\t\t\t\t***           4. Chu Vi Complex Object                     ***");
@@ -537,7 +550,7 @@ namespace DoAn_OOP_BAI1_ver1
                     }
                 }
                 else
-                    throw new Exception("Khong Toan Tai Danh Sach Hinh!!");
+                    throw new Exception("Khong Ton Tai Danh Sach Hinh!!");
             }
             catch (Exception e)
             {

@@ -26,3 +26,10 @@ D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csprojAssemblyRefe
 D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csproj.CoreCompileInputs.cache
 D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.exe
 D:\School\OOP\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb
+E:\doanoop\BAI1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe.config
+E:\doanoop\BAI1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe
+E:\doanoop\BAI1\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.pdb
+E:\doanoop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csprojAssemblyReference.cache
+E:\doanoop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csproj.CoreCompileInputs.cache
+E:\doanoop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.exe
+E:\doanoop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb
