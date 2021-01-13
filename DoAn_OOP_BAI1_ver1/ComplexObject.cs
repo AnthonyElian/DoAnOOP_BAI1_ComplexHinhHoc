@@ -409,7 +409,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 2:
                                 {
-                                    uGroup.Devided(ref Temp);
+                                    uGroup.Divided(ref Temp);
                                     Temp.SetDiem();
                                     Console.WriteLine("Da unGroup");
                                     break;

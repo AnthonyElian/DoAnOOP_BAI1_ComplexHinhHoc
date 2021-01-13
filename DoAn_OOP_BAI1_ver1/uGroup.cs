@@ -43,7 +43,7 @@ namespace DoAn_OOP_BAI1_ver1
             return Merge;
         }
 
-        static public void Devided(ref ComplexObject A)
+        static public void Divided(ref ComplexObject A)
         {
             Console.Write("Moi nhap so luong hinh muon Ungroup trong danh sach da Group: ");
             int temp = int.Parse(Console.ReadLine());
