@@ -25,7 +25,7 @@ namespace DoAn_OOP_BAI1_ver1
         public ComplexObject(Point p1, Point p2, int color, List<Shape> listshape) : base(p1, p2, color) 
         {
             this.lShape = listshape;
-            this.SetDiem(); ;
+            this.SetDiem(); 
         }
 
         public ComplexObject(List<Shape> lshape)
