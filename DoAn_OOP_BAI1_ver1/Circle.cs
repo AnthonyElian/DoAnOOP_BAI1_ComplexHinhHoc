@@ -15,11 +15,10 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Nhap()
         {
-            do
-            {
+            do {
                 base.Nhap();
             }
-            while (Math.Abs(this.P1.x - this.P2.x) != Math.Abs(this.P1.y - this.P2.y));
+            while(Math.Abs(this.P1.x - this.P2.x) != Math.Abs(this.P1.y - this.P2.y));
         }
 
         public new void Nhap(Point p1, Point p2, int color)
@@ -123,7 +122,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override double DienTich()
         {
-            double DienTich = Math.PI * this.DuongKinh();
+            double DienTich = Math.PI * this.DuongKinh() / 2 * this.DuongKinh() / 2;
             return DienTich;
         }
 
