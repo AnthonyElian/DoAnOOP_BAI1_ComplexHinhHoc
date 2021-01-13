@@ -15,7 +15,11 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Nhap()
         {
-            base.Nhap();
+            do
+            {
+                base.Nhap();
+            }
+            while (Math.Abs(this.P1.x - this.P2.x) != Math.Abs(this.P1.y - this.P2.y));
         }
 
         public new void Nhap(Point p1, Point p2, int color)
