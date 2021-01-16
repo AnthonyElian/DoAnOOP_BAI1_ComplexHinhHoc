@@ -31,9 +31,12 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Ve()
         {
+            ConsoleColor foreground = Console.ForegroundColor;
+            Console.ForegroundColor = (ConsoleColor)this.Color;
             Console.WriteLine("Ve Doan Thang");
+            Console.ResetColor();
             Console.WriteLine("Ve Khung Doan Thang: ");
-            Console.WriteLine("|1_None | 2_Hidden | 3_Dotted | 4_Dashed | 5_Solid | 6_Double | 7_Groove | 8_Ridge | 9_Inset | 10_Outset |");
+            Console.WriteLine("| 1_None | 2_Hidden | 3_Dotted | 4_Dashed | 5_Solid | 6_Double | 7_Groove | 8_Ridge | 9_Inset | 10_Outset |");
             Console.Write("Your choice => ");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
@@ -149,6 +152,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Xuat()
         {
+            ConsoleColor foreground = Console.ForegroundColor;
+            Console.ForegroundColor = (ConsoleColor)this.Color;
             Console.WriteLine("Thong tin Toa Do thu nhat cua khung Doan Thang la: ");
             this.P1.Xuat();
 
@@ -156,6 +161,7 @@ namespace DoAn_OOP_BAI1_ver1
             this.P2.Xuat();
 
             Console.WriteLine("Thong tin Mau Sac cua Doan Thang la: " + this.Color);
+            Console.ResetColor();
         }
 
         public override void Menu()

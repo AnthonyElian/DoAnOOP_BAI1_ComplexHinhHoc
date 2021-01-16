@@ -27,9 +27,12 @@ namespace DoAn_OOP_BAI1_ver1
         public override void Ve()
         {
             //Console.WriteLine();
+            ConsoleColor foreground = Console.ForegroundColor;
+            Console.ForegroundColor = (ConsoleColor)this.Color;
             Console.WriteLine("Ve Hinh Tam Giac");
+            Console.ResetColor();
             Console.WriteLine("Ve khung Hinh Tam Giac");
-            Console.WriteLine("|1_None | 2_Hidden | 3_Dotted | 4_Dashed | 5_Solid | 6_Double | 7_Groove | 8_Ridge | 9_Inset | 10_Outset |");
+            Console.WriteLine("| 1_None | 2_Hidden | 3_Dotted | 4_Dashed | 5_Solid | 6_Double | 7_Groove | 8_Ridge | 9_Inset | 10_Outset |");
             Console.Write("Your choice => ");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
@@ -157,6 +160,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Xuat()
         {
+            ConsoleColor foreground = Console.ForegroundColor;
+            Console.ForegroundColor = (ConsoleColor)this.Color;
             Console.WriteLine("Thong tin Toa Do thu nhat cua khung Hinh Tam Giac la: ");
             this.P1.Xuat();
 
@@ -166,7 +171,7 @@ namespace DoAn_OOP_BAI1_ver1
             //this.LoaiTamGiac();
 
             Console.WriteLine("Thong tin Mau Sac cua Hinh Tam Giac la: " + this.Color);
-
+            Console.ResetColor();
             Console.WriteLine("Chieu Cao Hinh Tam Giac la: " + this.ChieuCao());
             Console.WriteLine("Do Dai Day Hinh Tam Giac la: " + this.DoDaiDay());
 

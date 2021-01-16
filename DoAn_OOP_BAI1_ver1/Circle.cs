@@ -16,7 +16,7 @@ namespace DoAn_OOP_BAI1_ver1
         public override void Nhap()
         {
             do {
-                base.Nhap();
+                base.Nhap(); 
             }
             while(Math.Abs(this.P1.x - this.P2.x) != Math.Abs(this.P1.y - this.P2.y));
         }
@@ -28,8 +28,10 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Ve()
         {
-            //Console.WriteLine();
+            ConsoleColor foreground = Console.ForegroundColor;
+            Console.ForegroundColor = (ConsoleColor)this.Color;
             Console.WriteLine("Ve Hinh Tron");
+            Console.ResetColor();
             Console.WriteLine("Ve Khung Hinh Tron: ");
             Console.WriteLine("|1_None | 2_Hidden | 3_Dotted | 4_Dashed | 5_Solid | 6_Double | 7_Groove | 8_Ridge | 9_Inset | 10_Outset |");
             Console.Write("Your choice => ");
@@ -154,6 +156,8 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Xuat()
         {
+            ConsoleColor foreground = Console.ForegroundColor;
+            Console.ForegroundColor = (ConsoleColor)this.Color;
             Console.WriteLine("Thong tin Toa Do thu nhat cua khung Hinh Tron la: ");
             this.P1.Xuat();
 
@@ -161,7 +165,7 @@ namespace DoAn_OOP_BAI1_ver1
             this.P2.Xuat();
 
             Console.WriteLine("Thong tin Mau Sac cua Hinh Tron la: " + this.Color);
-
+            Console.ResetColor();
             Console.WriteLine("Ban Kinh cua Hinh Tron la: " + this.DuongKinh() / 2);
 
             //Console.WriteLine("Dien Tich Hinh Tron la: " + this.DienTich());

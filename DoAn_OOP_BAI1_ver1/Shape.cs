@@ -52,6 +52,9 @@ namespace DoAn_OOP_BAI1_ver1
             Console.WriteLine("Moi nhap thong tin toa do Diem Thu Hai: ");
             this.p2.Nhap();
 
+            Console.WriteLine("Bang mau: ");
+            Console.WriteLine("|| 0_Black    || 1_DarkBlue || 2_DarkGreen || 3_DarkCyan || 4_DarkRed || 5_DarkMagenta || 6_DarkYellow || 7_Gray   ||");
+            Console.WriteLine("|| 8_DarkGray || 9_Blue     || 10_Green    || 11_Cyan    || 12_Red    || 13_Magenta    || 14_Yellow    || 15_White ||");
             Console.Write("Moi nhap thong tin Mau Sac: ");
             this.iColor = int.Parse(Console.ReadLine());
         }
@@ -201,6 +204,9 @@ namespace DoAn_OOP_BAI1_ver1
 
         public virtual void changeColor()
         {
+            Console.WriteLine("Bang mau: ");
+            Console.WriteLine("|| 0_Black    || 1_DarkBlue || 2_DarkGreen || 3_DarkCyan || 4_DarkRed || 5_DarkMagenta || 6_DarkYellow || 7_Gray   ||");
+            Console.WriteLine("|| 8_DarkGray || 9_Blue     || 10_Green    || 11_Cyan    || 12_Red    || 13_Magenta    || 14_Yellow    || 15_White ||");
             Console.Write("Moi nhap thong tin Mau muon thay doi: ");
             this.iColor = int.Parse(Console.ReadLine());
         }
