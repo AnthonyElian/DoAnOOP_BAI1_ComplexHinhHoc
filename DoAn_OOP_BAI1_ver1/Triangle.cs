@@ -19,11 +19,6 @@ namespace DoAn_OOP_BAI1_ver1
             base.Nhap();
         }
 
-        public new void Nhap(Point p1, Point p2, int color)
-        {
-            base.Nhap(p1, p2, color);
-        }
-
         public override void Ve()
         {
             //Console.WriteLine();
@@ -170,7 +165,7 @@ namespace DoAn_OOP_BAI1_ver1
 
             //this.LoaiTamGiac();
 
-            Console.WriteLine("Thong tin Mau Sac cua Hinh Tam Giac la: " + this.Color);
+            Console.WriteLine("Thong tin Mau Sac cua Hinh Tam Giac la: " + this.Color + " " + Console.ForegroundColor);
             Console.ResetColor();
             Console.WriteLine("Chieu Cao Hinh Tam Giac la: " + this.ChieuCao());
             Console.WriteLine("Do Dai Day Hinh Tam Giac la: " + this.DoDaiDay());

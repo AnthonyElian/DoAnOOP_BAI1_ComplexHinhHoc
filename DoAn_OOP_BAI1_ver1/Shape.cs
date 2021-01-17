@@ -59,13 +59,6 @@ namespace DoAn_OOP_BAI1_ver1
             this.iColor = int.Parse(Console.ReadLine());
         }
 
-        public void Nhap(Point P1, Point P2, int color)
-        {
-            this.p1 = P1;
-            this.p2 = P2;
-            this.iColor = color;
-        }
-
         public abstract double DienTich();
 
         public abstract double ChuVi();

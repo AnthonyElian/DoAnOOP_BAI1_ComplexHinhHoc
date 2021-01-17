@@ -19,11 +19,6 @@ namespace DoAn_OOP_BAI1_ver1
             base.Nhap();
         }
 
-        public new void Nhap(Point p1, Point p2, int color)
-        {
-            base.Nhap(p1, p2, color);
-        }
-
         //public override void DKVe()
         //{
         //    base.DKVe();
@@ -160,7 +155,7 @@ namespace DoAn_OOP_BAI1_ver1
             Console.WriteLine("Thong tin Toa Do thu hai cua khung Doan Thang la: ");
             this.P2.Xuat();
 
-            Console.WriteLine("Thong tin Mau Sac cua Doan Thang la: " + this.Color);
+            Console.WriteLine("Thong tin Mau Sac cua Doan Thang la: " + this.Color + " " + Console.ForegroundColor);
             Console.ResetColor();
         }
 

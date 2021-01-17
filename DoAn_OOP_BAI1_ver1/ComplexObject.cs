@@ -230,7 +230,7 @@ namespace DoAn_OOP_BAI1_ver1
             Console.WriteLine("Thong tin Toa Do thu hai cua khung Complex la: ");
             this.P2.Xuat();
 
-            Console.WriteLine("Thong tin Mau Sac cua Complex la: " + this.Color);
+            Console.WriteLine("Thong tin Mau Sac cua Complex la: " + this.Color + " " + Console.ForegroundColor);
             foreach (Shape item in this.lShape)
             {
                 item.Xuat();
