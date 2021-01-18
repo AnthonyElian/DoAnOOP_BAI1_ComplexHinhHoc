@@ -131,7 +131,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public double BanKinhKhungTronNgoaiTiep()
         {
-            double temp = this.P1.x - this.P2.x;
+            double temp = Math.Abs(this.P1.x - this.P2.x);
             return temp / 2;
         }
 
