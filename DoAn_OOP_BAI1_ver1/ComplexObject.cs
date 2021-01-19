@@ -392,7 +392,6 @@ namespace DoAn_OOP_BAI1_ver1
             this.Xuat();
             Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
             Temp = uGroup.Merge(this.ListShape, florida);
-            Console.WriteLine(Temp.iFloor);
             try
             {
                 if (Temp.lShape.Count != 0)
