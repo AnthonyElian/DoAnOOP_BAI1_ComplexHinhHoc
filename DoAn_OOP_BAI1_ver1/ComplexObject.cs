@@ -9,17 +9,26 @@ namespace DoAn_OOP_BAI1_ver1
     public class ComplexObject : Shape
     {
         private List<Shape> lShape;
+        private int iFloor;
 
         public List<Shape> ListShape
         {
             get { return this.lShape; }
             set { this.lShape = value; }
         }
-        public ComplexObject() : base() 
+
+        public int floor
+        {
+            get { return this.iFloor; }
+            set { this.iFloor = value; }
+        }
+
+        public ComplexObject(int floor) : base() 
         {
             this.lShape = new List<Shape>();
             this.P1 = new Point(0, 0);
             this.P2 = new Point(0, 0);
+            this.iFloor = floor;
         }
 
         public ComplexObject(Point p1, Point p2, int color, List<Shape> listshape) : base(p1, p2, color) 
@@ -376,7 +385,7 @@ namespace DoAn_OOP_BAI1_ver1
         public void MenuTemp()
         {
             int flag = 1;
-            ComplexObject Temp = new ComplexObject();
+            ComplexObject Temp = new ComplexObject(this.iFloor);
             this.Xuat();
             Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
             Temp = uGroup.Merge(this.ListShape);          
@@ -422,6 +431,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 3:
                                 {
+                                    Console.WriteLine("BAN DANG O TANG THU: " + this.iFloor);
                                     Temp.Xuat();
                                     break;
                                 }
@@ -439,6 +449,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 {
                                     flag = 0;
                                     Console.Clear();
+                                    this.iFloor--;
                                     break;
                                 }
                             default:
@@ -489,6 +500,7 @@ namespace DoAn_OOP_BAI1_ver1
                         {
                             case 1:
                                 {
+                                    this.iFloor = this.iFloor + 1;
                                     this.MenuTemp();
                                     break;
                                 }
@@ -537,12 +549,14 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 9:
                                 {
+                                    Console.WriteLine("BAN DANG O TANG THU: " + this.iFloor);
                                     this.Xuat();
                                     break;
                                 }
                             case 0:
                                 {
                                     flag = 0;
+                                    this.iFloor--;
                                     Console.Clear();
                                     break;
                                 }
