@@ -37,9 +37,10 @@ namespace DoAn_OOP_BAI1_ver1
             this.SetDiem(); 
         }
 
-        public ComplexObject(List<Shape> lshape)
+        public ComplexObject(List<Shape> lshape, int floor)
         {
             this.lShape = lshape;
+            this.iFloor = floor;
             this.SetDiem();
         }
 
@@ -382,13 +383,16 @@ namespace DoAn_OOP_BAI1_ver1
             foreach (var item in this.ListShape)
                 item.ThuNho(n);
         }
-        public void MenuTemp()
+        public void MenuTemp(ref int a)
         {
             int flag = 1;
-            ComplexObject Temp = new ComplexObject(this.iFloor);
+            a = a + 1;
+            ComplexObject Temp = new ComplexObject(a);
+            int florida = Temp.iFloor;
             this.Xuat();
             Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
-            Temp = uGroup.Merge(this.ListShape);          
+            Temp = uGroup.Merge(this.ListShape, florida);
+            Console.WriteLine(Temp.iFloor);
             try
             {
                 if (Temp.lShape.Count != 0)
@@ -431,7 +435,9 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 3:
                                 {
-                                    Console.WriteLine("BAN DANG O TANG THU: " + this.iFloor);
+                                    //Console.WriteLine(this.iFloor);
+                                    //Console.WriteLine(Temp.iFloor);
+                                    Console.WriteLine("BAN DANG O TANG THU: " + florida);
                                     Temp.Xuat();
                                     break;
                                 }
@@ -449,7 +455,6 @@ namespace DoAn_OOP_BAI1_ver1
                                 {
                                     flag = 0;
                                     Console.Clear();
-                                    this.iFloor--;
                                     break;
                                 }
                             default:
@@ -499,9 +504,8 @@ namespace DoAn_OOP_BAI1_ver1
                         switch (choice)
                         {
                             case 1:
-                                {
-                                    this.iFloor = this.iFloor + 1;
-                                    this.MenuTemp();
+                                { 
+                                    this.MenuTemp(ref this.iFloor);
                                     break;
                                 }
                             case 2:
@@ -556,7 +560,6 @@ namespace DoAn_OOP_BAI1_ver1
                             case 0:
                                 {
                                     flag = 0;
-                                    this.iFloor--;
                                     Console.Clear();
                                     break;
                                 }

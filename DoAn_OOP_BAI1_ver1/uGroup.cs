@@ -27,7 +27,7 @@ namespace DoAn_OOP_BAI1_ver1
         //    this.Group = new ComplexObject();
         //}
 
-        static public ComplexObject Merge(List<Shape> lShape)
+        static public ComplexObject Merge(List<Shape> lShape, int floor)
         {
             List<Shape> DsShape = new List<Shape>();
             Console.Write("Moi nhap so luong hinh muon Group voi nhau: ");
@@ -38,7 +38,7 @@ namespace DoAn_OOP_BAI1_ver1
                 int tmp1 = int.Parse(Console.ReadLine());
                 DsShape.Add(lShape[tmp1]);
             }
-            ComplexObject Merge = new ComplexObject(DsShape);
+            ComplexObject Merge = new ComplexObject(DsShape, floor);
             LayDiem(ref Merge);
             return Merge;
         }
