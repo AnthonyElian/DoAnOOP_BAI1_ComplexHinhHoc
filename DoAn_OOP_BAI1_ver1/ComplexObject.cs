@@ -39,6 +39,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public ComplexObject(Point p1, Point p2, int color, List<Shape> listshape) : base(p1, p2, color)
         {
+            this.lCo = new List<ComplexObject>();
             this.lShape = listshape;
             this.SetDiem();
         }
@@ -514,8 +515,13 @@ namespace DoAn_OOP_BAI1_ver1
                             Console.Write("Moi nhap thu tu C0 thu nhat: ");int stt1 = int.Parse(Console.ReadLine());
                             Console.Write("Moi nhap thu tu CO thu hai: ");int stt2 = int.Parse(Console.ReadLine());
                             var result = this.lCo[stt1].lShape.Union(this.lCo[stt2].lShape);
+                            ComplexObject temp = new ComplexObject(this.lCo[stt1].iFloor);
                             this.lCo.RemoveAt(stt2); this.lCo.RemoveAt(stt1);
-                            this.lCo.Add((ComplexObject)result);
+                            foreach (var item in result)
+                            {
+                                temp.lShape.Add(item);
+                            }
+                            this.lCo.Add(temp);
                             break;
                         }
                     case 5:
