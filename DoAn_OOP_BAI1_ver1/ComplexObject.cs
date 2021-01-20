@@ -516,13 +516,17 @@ namespace DoAn_OOP_BAI1_ver1
                             Console.Write("Moi nhap thu tu C0 thu nhat: ");int stt1 = int.Parse(Console.ReadLine());
                             Console.Write("Moi nhap thu tu CO thu hai: ");int stt2 = int.Parse(Console.ReadLine());
                             var result = this.lCo[stt1].lShape.Union(this.lCo[stt2].lShape);
-                            ComplexObject temp = new ComplexObject(this.lCo[stt1].iFloor);
+                            ComplexObject temp = new ComplexObject(this.lCo[stt2].iFloor);
+                            int mau = this.lCo[stt2].Color;
                             this.lCo.RemoveAt(stt2); this.lCo.RemoveAt(stt1);
                             foreach (var item in result)
                             {
                                 temp.lShape.Add(item);
                             }
                             this.lCo.Add(temp);
+                           // Console.WriteLine(this.lCo.Count);
+                            this.lCo[this.lCo.Count - 1].Color = mau;
+                            this.lCo[this.lCo.Count - 1].SetDiem();
                             break;
                         }
                     case 5:
