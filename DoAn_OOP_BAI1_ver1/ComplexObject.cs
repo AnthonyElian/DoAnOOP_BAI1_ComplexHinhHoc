@@ -45,6 +45,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public ComplexObject(List<Shape> lshape, int floor)
         {
+            this.lCo = new List<ComplexObject>();
             this.lShape = lshape;
             this.iFloor = floor;
             this.SetDiem();
@@ -564,6 +565,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 {
 
                                     int x = this.lCo.Count;
+                                    //x++;
                                     ComplexObject Temp = new ComplexObject(this.iFloor+1);
                                     this.lCo.Add(Temp);
                                     this.Xuat();
