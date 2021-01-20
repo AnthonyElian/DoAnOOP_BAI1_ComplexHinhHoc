@@ -512,15 +512,9 @@ namespace DoAn_OOP_BAI1_ver1
                             Console.WriteLine("Ban muon gop C0_1 nao vao CO_2 nao: ");
                             Console.Write("Moi nhap thu tu C0 thu nhat: ");int stt1 = int.Parse(Console.ReadLine());
                             Console.Write("Moi nhap thu tu CO thu hai: ");int stt2 = int.Parse(Console.ReadLine());
-                            for (int i = 0; i < this.lCo[stt1].lShape.Count; i++)
-                            {
-                                this.lCo[stt2].lShape.Add(this.lCo[stt1].lShape[i]);
-                            }
-                            this.lCo.RemoveAt(stt1);
-                            foreach (var item in this.lCo)
-                            {
-                                item.Xuat();
-                            }
+                            var result = this.lCo[stt1].lShape.Union(this.lCo[stt2].lShape);
+                            this.lCo.RemoveAt(stt2); this.lCo.RemoveAt(stt1);
+                            this.lCo.Add((ComplexObject)result);
                             break;
                         }
                     case 5:
@@ -575,6 +569,8 @@ namespace DoAn_OOP_BAI1_ver1
                                     this.Xuat();
                                     Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
                                     this.lCo[x] = uGroup.Merge(this.ListShape, this.iFloor + 1);
+                                    Console.Write("Nhap mau cua complex da merge: ");
+                                    this.lCo[x].Color = int.Parse(Console.ReadLine());
                                     this.MenuTemp(x);
                                     break;
                                 }
