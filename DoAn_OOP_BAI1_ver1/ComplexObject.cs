@@ -399,7 +399,7 @@ namespace DoAn_OOP_BAI1_ver1
                     Console.WriteLine("Cac hinh cua CO: " + this.lCo[x].lShape.Count);
                     while (flag == 1)
                     {
-
+                        Console.WriteLine("\t\t\t\tDAY LA TANG: " + florida);
                         Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
                         Console.WriteLine("\t\t\t\t***           1. Add                                       ***");
                         Console.WriteLine("\t\t\t\t***           2. Divide                                    ***");
@@ -473,11 +473,12 @@ namespace DoAn_OOP_BAI1_ver1
                 Console.WriteLine(e.Message);
             }
         }
-        public void QLCO()
+        public void QLCO(int a)
         {
             int flag = 1;
             while (flag == 1)
             {
+                Console.WriteLine("\t\t\t\tDAY LA TANG: " + a);
                 Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
                 Console.WriteLine("\t\t\t\t***           1. Xuat DS CO                                ***");
                 Console.WriteLine("\t\t\t\t***           2. Thao tac voi CO                           ***");
@@ -550,6 +551,8 @@ namespace DoAn_OOP_BAI1_ver1
                 {
                     while (flag == 1)
                     {
+                        int floor = this.iFloor + 1;
+                        Console.WriteLine("\t\t\t\tDAY LA TANG: " + floor);
                         Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
                         Console.WriteLine("\t\t\t\t***           1. Thao tac tren hinh Group/UnGroup          ***");
                         Console.WriteLine("\t\t\t\t***           2. Ve Complex Object                         ***");
@@ -633,7 +636,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 10:
                                 {
-                                    this.QLCO();
+                                    this.QLCO(this.iFloor + 1);
                                     break;
                                 }
                             case 11:
