@@ -385,25 +385,16 @@ namespace DoAn_OOP_BAI1_ver1
             foreach (var item in this.ListShape)
                 item.ThuNho(n);
         }
-        public void MenuTemp(ref int a)
+        public void MenuTemp(int x)
         {
+            int florida = this.lCo[x].iFloor;
             int flag = 1;
-            a = a + 1;
-            int x = this.lCo.Count;
-            ComplexObject Temp = new ComplexObject(a);
-            this.lCo.Add(Temp);
-            int florida = Temp.iFloor;
-            this.Xuat();
-            Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
-            this.lCo[x] = uGroup.Merge(this.ListShape, florida);
             try
             {
                 if (this.lCo[x].lShape.Count != 0)
                 {
                     this.lCo[x].SetDiem();
-                    Console.WriteLine("Da merge: " + Temp.lShape.Count);
-                    Console.Write("Nhap mau cua complex da merge: ");
-                    this.lCo[x].Color = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Cac hinh cua CO: " + this.lCo[x].lShape.Count);
                     while (flag == 1)
                     {
 
@@ -425,13 +416,15 @@ namespace DoAn_OOP_BAI1_ver1
                                     Console.WriteLine("Ban muon them hinh thu may");
                                     int key = int.Parse(Console.ReadLine());
                                     this.lCo[x].add(this.lShape[key]);
-                                    Console.WriteLine("Tong so Hinh o tren la: " + Temp.ListShape.Count);
+                                    Console.WriteLine("Tong so Hinh o tren la: " + this.lCo[x].ListShape.Count);
                                     this.lCo[x].SetDiem();
                                     break;
                                 }
                             case 2:
                                 {
-                                    uGroup.Divided(ref Temp);
+                                    ComplexObject temp = this.lCo[x];
+                                    uGroup.Divided(ref temp);
+                                    this.lCo[x] = temp;
                                     this.lCo[x].SetDiem();
                                     Console.WriteLine("Da unGroup");
                                     break;
@@ -504,7 +497,7 @@ namespace DoAn_OOP_BAI1_ver1
                         {
                             Console.WriteLine("Ban muon thao tac Co thu may: ");
                             int x = int.Parse(Console.ReadLine());
-                            this.lCo[x].Menu();
+                            this.MenuTemp(x);
                             break;
                         }
                     case 3:
@@ -575,7 +568,14 @@ namespace DoAn_OOP_BAI1_ver1
                         {
                             case 1:
                                 {
-                                    this.MenuTemp(ref this.iFloor);
+
+                                    int x = this.lCo.Count;
+                                    ComplexObject Temp = new ComplexObject(this.iFloor+1);
+                                    this.lCo.Add(Temp);
+                                    this.Xuat();
+                                    Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
+                                    this.lCo[x] = uGroup.Merge(this.ListShape, this.iFloor + 1);
+                                    this.MenuTemp(x);
                                     break;
                                 }
                             case 2:
