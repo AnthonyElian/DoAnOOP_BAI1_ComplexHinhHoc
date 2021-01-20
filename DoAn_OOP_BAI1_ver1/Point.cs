@@ -49,7 +49,16 @@ namespace DoAn_OOP_BAI1_ver1
         
         public void Xuat()
         {
-            Console.Write("( " + Math.Round(this.dx,3) + ", " + Math.Round(this.dy, 3) +" )");
+            string ngoacdong = " )";
+            string ngoacmo = "( ";
+            if (Math.Round(this.dx, 3) >= 10 || Math.Round(this.dy, 3) >= 10)
+            {
+                Console.Write("( " + Math.Round(this.dx, 3) + ", " + Math.Round(this.dy, 3) + " )");
+            }
+            else
+            {
+                Console.Write(ngoacmo.PadRight(3) + Math.Round(this.dx, 3) + ", " + Math.Round(this.dy, 3) + ngoacdong.PadLeft(3));
+            }
         }
     }
 }
