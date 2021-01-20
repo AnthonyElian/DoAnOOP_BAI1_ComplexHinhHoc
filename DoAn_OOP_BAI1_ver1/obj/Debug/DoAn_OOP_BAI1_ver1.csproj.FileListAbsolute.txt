@@ -47,3 +47,10 @@ E:\doanoop\DoAnOOP_ko nop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.c
 E:\doanoop\DoAnOOP_ko nop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csproj.CoreCompileInputs.cache
 E:\doanoop\DoAnOOP_ko nop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.exe
 E:\doanoop\DoAnOOP_ko nop\BAI1\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb
+C:\Users\TDM\Desktop\New folder (2)\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe.config
+C:\Users\TDM\Desktop\New folder (2)\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.exe
+C:\Users\TDM\Desktop\New folder (2)\DoAn_OOP_BAI1_ver1\bin\Debug\DoAn_OOP_BAI1_ver1.pdb
+C:\Users\TDM\Desktop\New folder (2)\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csprojAssemblyReference.cache
+C:\Users\TDM\Desktop\New folder (2)\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.csproj.CoreCompileInputs.cache
+C:\Users\TDM\Desktop\New folder (2)\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.exe
+C:\Users\TDM\Desktop\New folder (2)\DoAn_OOP_BAI1_ver1\obj\Debug\DoAn_OOP_BAI1_ver1.pdb
