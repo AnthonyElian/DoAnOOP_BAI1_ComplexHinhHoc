@@ -158,13 +158,9 @@ namespace DoAn_OOP_BAI1_ver1
         {
             ConsoleColor foreground = Console.ForegroundColor;
             Console.ForegroundColor = (ConsoleColor)this.Color;
-            Console.WriteLine("Thong tin Toa Do thu nhat cua khung Hinh Ngu Giac Deu la: ");
-            this.P1.Xuat();
-
-            Console.WriteLine("Thong tin Toa Do thu hai cua khung Hinh Ngu Giac Deu la: ");
-            this.P2.Xuat();
-
-            Console.WriteLine("Thong tin Mau Sac cua Hinh Ngu Giac Deu la: " + this.Color + " " + Console.ForegroundColor);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PENTAGON~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.Write("      Toa Do 1: "); this.P1.Xuat(); Console.Write("             Toa Do 2: "); this.P2.Xuat(); Console.WriteLine("             Mau sac: " + Console.ForegroundColor);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.ResetColor();
             Console.WriteLine("Canh cua Hinh Ngu Giac Deu la: " + this.CanhNguGiacDeu());
 
@@ -203,6 +199,7 @@ namespace DoAn_OOP_BAI1_ver1
                                         this.Move();
                                     }
                                     while (Math.Abs(this.P1.x - this.P2.x) != Math.Abs(this.P1.y - this.P2.y));
+                                    this.Xuat();
                                     break;
                                 }
                             case 2:

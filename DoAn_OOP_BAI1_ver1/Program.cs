@@ -32,6 +32,7 @@ namespace DoAn_OOP_BAI1_ver1
                 {
                     case 1:
                         {
+                            Console.Beep();
                             Rectangle HCN = new Rectangle();
                             HCN.Nhap();
                             HCN.Menu();
@@ -39,6 +40,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 2:
                         {
+                            Console.Beep();
                             Line DT = new Line();
                             DT.Nhap();
                             DT.Menu();
@@ -46,6 +48,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 3:
                         {
+                            Console.Beep();
                             Circle HTron = new Circle();
                             HTron.Nhap();
                             HTron.Menu();
@@ -53,6 +56,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 4:
                         {
+                            Console.Beep();
                             Triangle HTG = new Triangle();
                             HTG.Nhap();
                             HTG.Menu();
@@ -60,6 +64,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 5:
                         {
+                            Console.Beep();
                             Square HV = new Square();
                             HV.Nhap();
                             HV.Menu();
@@ -67,6 +72,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 6:
                         {
+                            Console.Beep();
                             Rhombus HT = new Rhombus();
                             HT.Nhap();
                             HT.Menu();
@@ -74,6 +80,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 7:
                         {
+                            Console.Beep();
                             Pentagon HNGD = new Pentagon();
                             HNGD.Nhap();
                             HNGD.Menu();
@@ -81,6 +88,7 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 8:
                         {
+                            Console.Beep();
                             int floor = 0;
                             ComplexObject cpO = new ComplexObject(floor);
                             cpO.Menu();
@@ -88,12 +96,14 @@ namespace DoAn_OOP_BAI1_ver1
                         }
                     case 9:
                         {
+                            Console.Beep();
                             flag = 0;
                             Console.Clear();
                             break;
                         }
                     default:
                         {
+                            Console.Beep();
                             Console.Clear();
                             Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
                             break;

@@ -153,13 +153,9 @@ namespace DoAn_OOP_BAI1_ver1
         {
             ConsoleColor foreground = Console.ForegroundColor;
             Console.ForegroundColor = (ConsoleColor)this.Color;
-            Console.WriteLine("Thong tin Toa Do thu nhat cua khung Hinh Tron la: ");
-            this.P1.Xuat();
-
-            Console.WriteLine("Thong tin Toa Do thu hai cua khung Hinh Tron la: ");
-            this.P2.Xuat();
-
-            Console.WriteLine("Thong tin Mau Sac cua Hinh Tron la: " + this.Color + " " + Console.ForegroundColor);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CIRCLE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.Write("      Toa Do 1: ");this.P1.Xuat();Console.Write("             Toa Do 2: ");this.P2.Xuat() ; Console.WriteLine("             Mau sac: " + Console.ForegroundColor);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.ResetColor();
             Console.WriteLine("Ban Kinh cua Hinh Tron la: " + this.DuongKinh() / 2);
 

@@ -9,6 +9,7 @@ namespace DoAn_OOP_BAI1_ver1
     public class ComplexObject : Shape
     {
         private List<Shape> lShape;
+        private List<ComplexObject> lCo;
         private int iFloor;
 
         public List<Shape> ListShape
@@ -16,25 +17,30 @@ namespace DoAn_OOP_BAI1_ver1
             get { return this.lShape; }
             set { this.lShape = value; }
         }
-
+        public List<ComplexObject> LCO
+        {
+            get { return this.lCo; }
+            set { this.lCo = value; }
+        }
         public int floor
         {
             get { return this.iFloor; }
             set { this.iFloor = value; }
         }
 
-        public ComplexObject(int floor) : base() 
+        public ComplexObject(int floor) : base()
         {
             this.lShape = new List<Shape>();
+            this.lCo = new List<ComplexObject>();
             this.P1 = new Point(0, 0);
             this.P2 = new Point(0, 0);
             this.iFloor = floor;
         }
 
-        public ComplexObject(Point p1, Point p2, int color, List<Shape> listshape) : base(p1, p2, color) 
+        public ComplexObject(Point p1, Point p2, int color, List<Shape> listshape) : base(p1, p2, color)
         {
             this.lShape = listshape;
-            this.SetDiem(); 
+            this.SetDiem();
         }
 
         public ComplexObject(List<Shape> lshape, int floor)
@@ -234,13 +240,9 @@ namespace DoAn_OOP_BAI1_ver1
         {
             ConsoleColor foreground = Console.ForegroundColor;
             Console.ForegroundColor = (ConsoleColor)this.Color;
-            Console.WriteLine("Thong tin Toa Do thu nhat cua khung Complex la: ");
-            this.P1.Xuat();
-
-            Console.WriteLine("Thong tin Toa Do thu hai cua khung Complex la: ");
-            this.P2.Xuat();
-
-            Console.WriteLine("Thong tin Mau Sac cua Complex la: " + this.Color + " " + Console.ForegroundColor);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~COMPLEX OBJECT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.Write("      Toa Do 1: "); this.P1.Xuat(); Console.Write("             Toa Do 2: "); this.P2.Xuat(); Console.WriteLine("             Mau sac: " + Console.ForegroundColor);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             foreach (Shape item in this.lShape)
             {
                 item.Xuat();
@@ -355,7 +357,7 @@ namespace DoAn_OOP_BAI1_ver1
             int a = int.Parse(Console.ReadLine());
             Console.Write("Tung Do vecto V: ");
             int b = int.Parse(Console.ReadLine());
-            base.Move(a,b);
+            base.Move(a, b);
             foreach (var item in this.ListShape)
                 item.Move(a, b);
         }
@@ -387,19 +389,21 @@ namespace DoAn_OOP_BAI1_ver1
         {
             int flag = 1;
             a = a + 1;
+            int x = this.lCo.Count;
             ComplexObject Temp = new ComplexObject(a);
+            this.lCo.Add(Temp);
             int florida = Temp.iFloor;
             this.Xuat();
             Console.WriteLine("Tong so Hinh o tren la: " + this.ListShape.Count);
-            Temp = uGroup.Merge(this.ListShape, florida);
+            this.lCo[x] = uGroup.Merge(this.ListShape, florida);
             try
             {
-                if (Temp.lShape.Count != 0)
+                if (this.lCo[x].lShape.Count != 0)
                 {
-                    Temp.SetDiem();
+                    this.lCo[x].SetDiem();
                     Console.WriteLine("Da merge: " + Temp.lShape.Count);
                     Console.Write("Nhap mau cua complex da merge: ");
-                    Temp.Color = int.Parse(Console.ReadLine());
+                    this.lCo[x].Color = int.Parse(Console.ReadLine());
                     while (flag == 1)
                     {
 
@@ -420,15 +424,15 @@ namespace DoAn_OOP_BAI1_ver1
                                     this.Xuat();
                                     Console.WriteLine("Ban muon them hinh thu may");
                                     int key = int.Parse(Console.ReadLine());
-                                    Temp.add(this.lShape[key]);
+                                    this.lCo[x].add(this.lShape[key]);
                                     Console.WriteLine("Tong so Hinh o tren la: " + Temp.ListShape.Count);
-                                    Temp.SetDiem();
+                                    this.lCo[x].SetDiem();
                                     break;
                                 }
                             case 2:
                                 {
                                     uGroup.Divided(ref Temp);
-                                    Temp.SetDiem();
+                                    this.lCo[x].SetDiem();
                                     Console.WriteLine("Da unGroup");
                                     break;
                                 }
@@ -437,17 +441,17 @@ namespace DoAn_OOP_BAI1_ver1
                                     //Console.WriteLine(this.iFloor);
                                     //Console.WriteLine(Temp.iFloor);
                                     Console.WriteLine("BAN DANG O TANG THU: " + florida);
-                                    Temp.Xuat();
+                                    this.lCo[x].Xuat();
                                     break;
                                 }
                             case 4:
                                 {
-                                    Temp.Menu();
+                                    this.lCo[x].Menu();
                                     break;
                                 }
                             case 5:
                                 {
-                                    Temp.Ve();
+                                    this.lCo[x].Ve();
                                     break;
                                 }
                             case 6:
@@ -472,13 +476,79 @@ namespace DoAn_OOP_BAI1_ver1
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-            }           
+            }
         }
-
+        public void QLCO()
+        {
+            int flag = 1;
+            while (flag == 1)
+            {
+                Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
+                Console.WriteLine("\t\t\t\t***           1. Xuat DS CO                                ***");
+                Console.WriteLine("\t\t\t\t***           2. Thao tac voi CO                           ***");
+                Console.WriteLine("\t\t\t\t***           3. Xoa CO                                    ***");
+                Console.WriteLine("\t\t\t\t***           4. Gop 2 CO                                  ***");
+                Console.WriteLine("\t\t\t\t***           5. Thoat                                     ***");
+                Console.WriteLine("\t\t\t\t**************************************************************");
+                Console.Write("Moi nhap lua chon cua ban => Your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        {
+                            foreach (var item in this.lCo)
+                                item.Xuat();
+                            break;
+                        }
+                    case 2:
+                        {
+                            Console.WriteLine("Ban muon thao tac Co thu may: ");
+                            int x = int.Parse(Console.ReadLine());
+                            this.lCo[x].Menu();
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine("Ban muon xoa Co nao");
+                            int x = int.Parse(Console.ReadLine());
+                            this.lCo.RemoveAt(x);
+                            break;
+                        }
+                    case 4:
+                        {
+                            Console.WriteLine("Ban muon gop C0_1 nao vao CO_2 nao: ");
+                            Console.Write("Moi nhap thu tu C0 thu nhat: ");int stt1 = int.Parse(Console.ReadLine());
+                            Console.Write("Moi nhap thu tu CO thu hai: ");int stt2 = int.Parse(Console.ReadLine());
+                            for (int i = 0; i < this.lCo[stt1].lShape.Count; i++)
+                            {
+                                this.lCo[stt2].lShape.Add(this.lCo[stt1].lShape[i]);
+                            }
+                            this.lCo.RemoveAt(stt1);
+                            foreach (var item in this.lCo)
+                            {
+                                item.Xuat();
+                            }
+                            break;
+                        }
+                    case 5:
+                        {
+                            flag = 0;
+                            Console.Clear();
+                            break;
+                        }
+                    default:
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Ban Nhap Sai!!! Vui long nhap lai ~~ ");
+                            break;
+                        }
+                }
+            }
+        }
         public override void Menu()
         {
             int flag = 1;
-            if(this.ListShape.Count == 0)
+            if (this.ListShape.Count == 0)
                 this.Nhap();
             try
             {
@@ -496,14 +566,15 @@ namespace DoAn_OOP_BAI1_ver1
                         Console.WriteLine("\t\t\t\t***           7. thu nho                                   ***");
                         Console.WriteLine("\t\t\t\t***           8. doi mau                                   ***");
                         Console.WriteLine("\t\t\t\t***           9. Xuat thong tin CO                         ***");
-                        Console.WriteLine("\t\t\t\t***           0. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t***          10. Quan Ly Danh sach CO                      ***");
+                        Console.WriteLine("\t\t\t\t***          11. Thoat                                     ***");
                         Console.WriteLine("\t\t\t\t**************************************************************");
                         Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                         int choice = int.Parse(Console.ReadLine());
                         switch (choice)
                         {
                             case 1:
-                                { 
+                                {
                                     this.MenuTemp(ref this.iFloor);
                                     break;
                                 }
@@ -556,7 +627,12 @@ namespace DoAn_OOP_BAI1_ver1
                                     this.Xuat();
                                     break;
                                 }
-                            case 0:
+                            case 10:
+                                {
+                                    this.QLCO();
+                                    break;
+                                }
+                            case 11:
                                 {
                                     flag = 0;
                                     Console.Clear();
