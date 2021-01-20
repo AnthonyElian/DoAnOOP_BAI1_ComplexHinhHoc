@@ -39,12 +39,14 @@ namespace DoAn_OOP_BAI1_ver1
 
         public ComplexObject(Point p1, Point p2, int color, List<Shape> listshape) : base(p1, p2, color)
         {
+            this.lCo = new List<ComplexObject>();
             this.lShape = listshape;
             this.SetDiem();
         }
 
         public ComplexObject(List<Shape> lshape, int floor)
         {
+            this.lCo = new List<ComplexObject>();
             this.lShape = lshape;
             this.iFloor = floor;
             this.SetDiem();
@@ -568,7 +570,6 @@ namespace DoAn_OOP_BAI1_ver1
                         {
                             case 1:
                                 {
-
                                     int x = this.lCo.Count;
                                     ComplexObject Temp = new ComplexObject(this.iFloor+1);
                                     this.lCo.Add(Temp);
