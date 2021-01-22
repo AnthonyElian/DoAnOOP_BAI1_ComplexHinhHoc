@@ -240,6 +240,7 @@ namespace DoAn_OOP_BAI1_ver1
 
         public override void Xuat()
         {
+            int i = 0;
             ConsoleColor foreground = Console.ForegroundColor;
             Console.ForegroundColor = (ConsoleColor)this.Color;
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~COMPLEX OBJECT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -247,6 +248,7 @@ namespace DoAn_OOP_BAI1_ver1
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             foreach (Shape item in this.lShape)
             {
+                Console.WriteLine("+ STT: " + i++);
                 item.Xuat();
                 //item.Ve();
             }
@@ -364,7 +366,7 @@ namespace DoAn_OOP_BAI1_ver1
                 item.Move(a, b);
         }
 
-        public int Comparer(Shape a, Shape b)
+        public int Compare(Shape a, Shape b)
         {
             // 1 lon // 2 be // 3 bang
             if (a > b)
@@ -663,13 +665,13 @@ namespace DoAn_OOP_BAI1_ver1
                                     this.Xuat();
                                     Console.Write("Chon hinh thu nhat co stt la: "); int stt1 = int.Parse(Console.ReadLine());
                                     Console.Write("Chon hinh thu hai co stt la: "); int stt2 = int.Parse(Console.ReadLine());
-                                    if (this.Comparer(this.lShape[stt1], this.lShape[stt2]) == 1)
+                                    if (this.Compare(this.lShape[stt1], this.lShape[stt2]) == 1)
                                     { 
                                         Console.WriteLine("Chu vi hinh 1: " + this.lShape[stt1].ChuVi() + " lon hon hinh hai: " + this.lShape[stt2].ChuVi()); 
                                     }    
                                     else
                                     {
-                                        if (this.Comparer(this.lShape[stt1], this.lShape[stt2]) == 2)
+                                        if (this.Compare(this.lShape[stt1], this.lShape[stt2]) == 2)
                                         {
                                             Console.WriteLine("Chu vi hinh 1: " + this.lShape[stt1].ChuVi() + " be hon hinh hai: " + this.lShape[stt2].ChuVi());
                                         }
