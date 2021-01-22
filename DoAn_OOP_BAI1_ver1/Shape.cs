@@ -210,5 +210,24 @@ namespace DoAn_OOP_BAI1_ver1
         }
 
         public abstract void Menu();
+
+        public static double operator +(Shape a, double num)
+        {
+            return a.DienTich() + num;
+        }
+
+        public static bool operator >(Shape a, Shape b)
+        {
+            double value1 = a.ChuVi();
+            double value2 = b.ChuVi();
+            return value1 > value2;
+        }
+
+        public static bool operator <(Shape a, Shape b)
+        {
+            double value1 = a.ChuVi();
+            double value2 = b.ChuVi();
+            return value1 < value2;
+        }
     }
 }

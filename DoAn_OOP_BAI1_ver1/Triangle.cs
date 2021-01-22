@@ -253,7 +253,6 @@ namespace DoAn_OOP_BAI1_ver1
             {
                 Console.WriteLine(e.Message);
             }
-
         }
     }
 }

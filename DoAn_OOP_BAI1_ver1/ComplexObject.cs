@@ -335,9 +335,9 @@ namespace DoAn_OOP_BAI1_ver1
         public override double DienTich()
         {
             double DienTich = 0;
-            foreach (Shape item in this.lShape)
+            foreach (var item in this.lShape)
             {
-                DienTich = DienTich + item.DienTich();
+                DienTich = item + DienTich;
             }
             return DienTich;
         }
@@ -362,6 +362,20 @@ namespace DoAn_OOP_BAI1_ver1
             base.Move(a, b);
             foreach (var item in this.ListShape)
                 item.Move(a, b);
+        }
+
+        public int Comparer(Shape a, Shape b)
+        {
+            // 1 lon // 2 be // 3 bang
+            if (a > b)
+                return 1;
+            else
+            {
+                if (a < b)
+                    return 2;
+                else
+                    return 3;
+            }    
         }
 
         public override void changeColor()
@@ -515,8 +529,8 @@ namespace DoAn_OOP_BAI1_ver1
                             Console.WriteLine("Ban muon gop C0_1 nao vao CO_2 nao: ");
                             Console.Write("Moi nhap thu tu C0 thu nhat: ");int stt1 = int.Parse(Console.ReadLine());
                             Console.Write("Moi nhap thu tu CO thu hai: ");int stt2 = int.Parse(Console.ReadLine());
-                            var result = this.lCo[stt1].lShape.Union(this.lCo[stt2].lShape);
-                            ComplexObject temp = new ComplexObject(this.lCo[stt2].iFloor);
+                            var result = this.lCo[stt1].lShape.Union(this.lCo[stt1].lShape);
+                            ComplexObject temp = new ComplexObject(this.lCo[stt1].iFloor);
                             int mau = this.lCo[stt2].Color;
                             this.lCo.RemoveAt(stt2); this.lCo.RemoveAt(stt1);
                             foreach (var item in result)
@@ -524,7 +538,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 temp.lShape.Add(item);
                             }
                             this.lCo.Add(temp);
-                           // Console.WriteLine(this.lCo.Count);
+                            Console.WriteLine(this.lCo.Count);
                             this.lCo[this.lCo.Count - 1].Color = mau;
                             this.lCo[this.lCo.Count - 1].SetDiem();
                             break;
@@ -568,7 +582,8 @@ namespace DoAn_OOP_BAI1_ver1
                         Console.WriteLine("\t\t\t\t***           8. doi mau                                   ***");
                         Console.WriteLine("\t\t\t\t***           9. Xuat thong tin CO                         ***");
                         Console.WriteLine("\t\t\t\t***          10. Quan Ly Danh sach CO                      ***");
-                        Console.WriteLine("\t\t\t\t***          11. Thoat                                     ***");
+                        Console.WriteLine("\t\t\t\t***          11. So Sanh 2 hinh da nhap                    ***");
+                        Console.WriteLine("\t\t\t\t***          12. Thoat                                     ***");
                         Console.WriteLine("\t\t\t\t**************************************************************");
                         Console.Write("Moi nhap lua chon cua ban => Your choice: ");
                         int choice = int.Parse(Console.ReadLine());
@@ -644,6 +659,26 @@ namespace DoAn_OOP_BAI1_ver1
                                     break;
                                 }
                             case 11:
+                                {
+                                    this.Xuat();
+                                    Console.Write("Chon hinh thu nhat co stt la: "); int stt1 = int.Parse(Console.ReadLine());
+                                    Console.Write("Chon hinh thu hai co stt la: "); int stt2 = int.Parse(Console.ReadLine());
+                                    if (this.Comparer(this.lShape[stt1], this.lShape[stt2]) == 1)
+                                    { 
+                                        Console.WriteLine("Chu vi hinh 1: " + this.lShape[stt1].ChuVi() + " lon hon hinh hai: " + this.lShape[stt2].ChuVi()); 
+                                    }    
+                                    else
+                                    {
+                                        if (this.Comparer(this.lShape[stt1], this.lShape[stt2]) == 2)
+                                        {
+                                            Console.WriteLine("Chu vi hinh 1: " + this.lShape[stt1].ChuVi() + " be hon hinh hai: " + this.lShape[stt2].ChuVi());
+                                        }
+                                        else
+                                            Console.WriteLine("Chu vi hinh 1: " + this.lShape[stt1].ChuVi() + " bang hinh hai: " + this.lShape[stt2].ChuVi());
+                                    }
+                                    break;
+                                }
+                            case 12:
                                 {
                                     flag = 0;
                                     Console.Clear();
