@@ -246,13 +246,13 @@ namespace DoAn_OOP_BAI1_ver1
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~COMPLEX OBJECT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.Write("      Toa Do 1: "); this.P1.Xuat(); Console.Write("             Toa Do 2: "); this.P2.Xuat(); Console.WriteLine("             Mau sac: " + Console.ForegroundColor);
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.ResetColor();
             foreach (Shape item in this.lShape)
             {
                 Console.WriteLine("+ STT: " + i++);
                 item.Xuat();
                 //item.Ve();
             }
-            Console.ResetColor();
         }
 
         public override void Ve()
@@ -651,7 +651,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 9:
                                 {
-                                    Console.WriteLine("BAN DANG O TANG THU: " + this.iFloor);
+                                    Console.WriteLine("BAN DANG O TANG THU: " + floor) ;
                                     this.Xuat();
                                     break;
                                 }
