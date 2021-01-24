@@ -405,7 +405,7 @@ namespace DoAn_OOP_BAI1_ver1
         }
         public void MenuTemp(int x)
         {
-            int florida = this.lCo[x].iFloor;
+            int florida = this.lCo[x].iFloor +1;
             int flag = 1;
             try
             {
@@ -658,7 +658,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 10:
                                 {
-                                    this.QLCO(this.iFloor + 1);
+                                    this.QLCO(this.iFloor+1);
                                     break;
                                 }
                             case 11:
