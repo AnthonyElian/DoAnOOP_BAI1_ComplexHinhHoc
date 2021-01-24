@@ -571,8 +571,9 @@ namespace DoAn_OOP_BAI1_ver1
                 {
                     while (flag == 1)
                     {
-                        int floor = this.iFloor + 1;
-                        Console.WriteLine("\t\t\t\tDAY LA TANG: " + floor);
+                        //int floor = this.iFloor + 1;
+                        //this.iFloor = floor;
+                        Console.WriteLine("\t\t\t\tDAY LA TANG: " + (this.iFloor+1));
                         Console.WriteLine("\t\t\t\t*****************************MENU*****************************");
                         Console.WriteLine("\t\t\t\t***           1. Thao tac tren hinh Group/UnGroup          ***");
                         Console.WriteLine("\t\t\t\t***           2. Ve Complex Object                         ***");
@@ -651,7 +652,7 @@ namespace DoAn_OOP_BAI1_ver1
                                 }
                             case 9:
                                 {
-                                    Console.WriteLine("BAN DANG O TANG THU: " + floor) ;
+                                    Console.WriteLine("BAN DANG O TANG THU: " + (this.iFloor+1)) ;
                                     this.Xuat();
                                     break;
                                 }
